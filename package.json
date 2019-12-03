@@ -64,8 +64,7 @@
   },
   "scripts": {
     "pretest": "eslint .",
-    "test": "jest",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "test": "jest"
   },
   "repository": "https://github.com/seanpue/graphtransliterator-node.git",
   "jest": {
