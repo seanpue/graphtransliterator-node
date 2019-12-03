@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "A. Sean Pue",
+      "authorEmail": "pue@msu.edu",
+      "authorUrl": "https://seanpue.com"
+    }
+  }
+}
