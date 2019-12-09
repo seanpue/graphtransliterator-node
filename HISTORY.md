@@ -7,7 +7,7 @@
 --------------------
 * Add documentation
 
-0.2.0 (xx-xx-xxxx)
+0.2.0 (12-10-2019)
 ------------------
 * Added matchAllAt() to GraphTransliterator
 * Added console logging of error message or throwing of errors if 
