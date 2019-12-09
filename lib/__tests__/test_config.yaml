@@ -19,6 +19,8 @@ rules:
   d (c <class_a>): D(BEFORE_C_AND_CLASS_A)
   (b b) a: A(AFTER_B_B)
   <wb> Aa: A(ONLY_A_CONSTRAINED_RULE)
+  d d: "<DD>"
+  d: "<D>"
   " ": " "
 onmatch_rules:
   -
