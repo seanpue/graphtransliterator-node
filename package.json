@@ -68,7 +68,11 @@
   },
   "repository": "https://github.com/seanpue/graphtransliterator-node.git",
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "node_modules",
+      "lib"
+    ]
   },
   "license": "MIT"
 }
