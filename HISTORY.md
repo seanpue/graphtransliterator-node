@@ -1,6 +1,12 @@
 x.x.x (xx-xx-xxxx)
 ------------------
+* implemented basic transliteration functionality from detailed JSON
+* added tests for all aspects of transliteration
+* added lib/__tests__/graphtransliterator.test.js
+* added lib/__tests__/test_config.json and test_config.yaml
 * restored afterscript to travis.yml and removed script from package.json
+* added GraphTransliterator.js
+* began constructor for GraphTransliterator
 
 0.1.0 (12-03-2019)
 ------------------

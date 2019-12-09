@@ -1,0 +1,531 @@
+{
+  "tokens": {
+    "a": ["class_a"],
+    "b": ["class_b"],
+    "c": ["class_c"],
+    " ": ["wb"],
+    "d": [],
+    "Aa": ["contrained_rule"]
+  },
+  "rules": [
+    {
+      "production": "AA(AFTER_BB_AND_CLASS_C)",
+      "prev_classes": ["class_c"],
+      "prev_tokens": ["b", "b"],
+      "tokens": ["a", "a"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.22239242133644802
+    },
+    {
+      "production": "AB(BEFORE_C_AND_CLASS_B)",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["a", "b"],
+      "next_classes": ["class_b"],
+      "next_tokens": ["c"],
+      "cost": 0.2630344058337938
+    },
+    {
+      "production": "A(BEFORE_B_B_B)",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["a"],
+      "next_classes": null,
+      "next_tokens": ["b", "b", "b"],
+      "cost": 0.2630344058337938
+    },
+    {
+      "production": "A(AFTER_CLASS_C_AND_CLASS_C)",
+      "prev_classes": ["class_c", "class_c"],
+      "prev_tokens": null,
+      "tokens": ["a"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.32192809488736235
+    },
+    {
+      "production": "A(AFTER_B_AND_CLASS_C)",
+      "prev_classes": ["class_c"],
+      "prev_tokens": ["b"],
+      "tokens": ["a"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.32192809488736235
+    },
+    {
+      "production": "D(BEFORE_C_AND_CLASS_A)",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["d"],
+      "next_classes": ["class_a"],
+      "next_tokens": ["c"],
+      "cost": 0.32192809488736235
+    },
+    {
+      "production": "A(AFTER_B_B)",
+      "prev_classes": null,
+      "prev_tokens": ["b", "b"],
+      "tokens": ["a"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.32192809488736235
+    },
+    {
+      "production": "A(BEFORE_CLASS_C)",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["a"],
+      "next_classes": ["class_c"],
+      "next_tokens": null,
+      "cost": 0.41503749927884376
+    },
+    {
+      "production": "C*2",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["c", "c"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.41503749927884376
+    },
+    {
+      "production": "A(ONLY_A_CONSTRAINED_RULE)",
+      "prev_classes": ["wb"],
+      "prev_tokens": null,
+      "tokens": ["Aa"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.41503749927884376
+    },
+    {
+      "production": "A",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["a"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.5849625007211562
+    },
+    {
+      "production": "B",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["b"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.5849625007211562
+    },
+    {
+      "production": "C",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": ["c"],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.5849625007211562
+    },
+    {
+      "production": " ",
+      "prev_classes": null,
+      "prev_tokens": null,
+      "tokens": [" "],
+      "next_classes": null,
+      "next_tokens": null,
+      "cost": 0.5849625007211562
+    }
+  ],
+  "whitespace": { "default": " ", "consolidate": true, "token_class": "wb" },
+  "onmatch_rules": [
+    {
+      "prev_classes": ["class_a", "class_b"],
+      "next_classes": ["class_a", "class_b"],
+      "production": "!"
+    },
+    {
+      "prev_classes": ["class_a"],
+      "next_classes": ["class_b"],
+      "production": ","
+    }
+  ],
+  "metadata": {},
+  "ignore_errors": false,
+  "onmatch_rules_lookup": { "a": { "b": [0] }, "b": { "a": [1] } },
+  "tokens_by_class": {
+    "class_a": ["a"],
+    "class_b": ["b"],
+    "class_c": ["c"],
+    "wb": [" "],
+    "contrained_rule": ["Aa"]
+  },
+  "graph": {
+    "node": [
+      {
+        "type": "Start",
+        "ordered_children": {
+          "a": [1],
+          "d": [9],
+          "c": [13],
+          "Aa": [16],
+          "b": [19],
+          " ": [22]
+        }
+      },
+      {
+        "type": "token",
+        "token": "a",
+        "ordered_children": {
+          "__rules__": [6, 7, 8, 11, 12, 18],
+          "a": [2, 6, 7, 8, 11, 12, 18],
+          "b": [4, 6, 7, 8, 11, 12, 18]
+        }
+      },
+      {
+        "type": "token",
+        "token": "a",
+        "ordered_children": { "__rules__": [3] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 0,
+        "rule": {
+          "production": "AA(AFTER_BB_AND_CLASS_C)",
+          "prev_classes": ["class_c"],
+          "prev_tokens": ["b", "b"],
+          "tokens": ["a", "a"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.22239242133644802
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": "b",
+        "ordered_children": { "__rules__": [5] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 1,
+        "rule": {
+          "production": "AB(BEFORE_C_AND_CLASS_B)",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["a", "b"],
+          "next_tokens": ["c"],
+          "next_classes": ["class_b"],
+          "cost": 0.2630344058337938
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 2,
+        "rule": {
+          "production": "A(BEFORE_B_B_B)",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["a"],
+          "next_tokens": ["b", "b", "b"],
+          "next_classes": null,
+          "cost": 0.2630344058337938
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 3,
+        "rule": {
+          "production": "A(AFTER_CLASS_C_AND_CLASS_C)",
+          "prev_classes": ["class_c", "class_c"],
+          "prev_tokens": null,
+          "tokens": ["a"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.32192809488736235
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 4,
+        "rule": {
+          "production": "A(AFTER_B_AND_CLASS_C)",
+          "prev_classes": ["class_c"],
+          "prev_tokens": ["b"],
+          "tokens": ["a"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.32192809488736235
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": "d",
+        "ordered_children": { "__rules__": [10] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 5,
+        "rule": {
+          "production": "D(BEFORE_C_AND_CLASS_A)",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["d"],
+          "next_tokens": ["c"],
+          "next_classes": ["class_a"],
+          "cost": 0.32192809488736235
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 6,
+        "rule": {
+          "production": "A(AFTER_B_B)",
+          "prev_classes": null,
+          "prev_tokens": ["b", "b"],
+          "tokens": ["a"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.32192809488736235
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 7,
+        "rule": {
+          "production": "A(BEFORE_CLASS_C)",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["a"],
+          "next_tokens": null,
+          "next_classes": ["class_c"],
+          "cost": 0.41503749927884376
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": "c",
+        "ordered_children": { "__rules__": [21], "c": [14, 21] }
+      },
+      {
+        "type": "token",
+        "token": "c",
+        "ordered_children": { "__rules__": [15] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 8,
+        "rule": {
+          "production": "C*2",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["c", "c"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.41503749927884376
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": "Aa",
+        "ordered_children": { "__rules__": [17] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 9,
+        "rule": {
+          "production": "A(ONLY_A_CONSTRAINED_RULE)",
+          "prev_classes": ["wb"],
+          "prev_tokens": null,
+          "tokens": ["Aa"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.41503749927884376
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 10,
+        "rule": {
+          "production": "A",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["a"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.5849625007211562
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": "b",
+        "ordered_children": { "__rules__": [20] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 11,
+        "rule": {
+          "production": "B",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["b"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.5849625007211562
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "rule",
+        "rule_key": 12,
+        "rule": {
+          "production": "C",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": ["c"],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.5849625007211562
+        },
+        "accepting": true,
+        "ordered_children": {}
+      },
+      {
+        "type": "token",
+        "token": " ",
+        "ordered_children": { "__rules__": [23] }
+      },
+      {
+        "type": "rule",
+        "rule_key": 13,
+        "rule": {
+          "production": " ",
+          "prev_classes": null,
+          "prev_tokens": null,
+          "tokens": [" "],
+          "next_tokens": null,
+          "next_classes": null,
+          "cost": 0.5849625007211562
+        },
+        "accepting": true,
+        "ordered_children": {}
+      }
+    ],
+    "edge": {
+      "0": {
+        "1": { "token": "a", "cost": 0.22239242133644802 },
+        "9": { "token": "d", "cost": 0.32192809488736235 },
+        "13": { "token": "c", "cost": 0.41503749927884376 },
+        "16": { "token": "Aa", "cost": 0.41503749927884376 },
+        "19": { "token": "b", "cost": 0.5849625007211562 },
+        "22": { "token": " ", "cost": 0.5849625007211562 }
+      },
+      "1": {
+        "2": { "token": "a", "cost": 0.22239242133644802 },
+        "4": { "token": "b", "cost": 0.2630344058337938 },
+        "6": {
+          "cost": 0.2630344058337938,
+          "constraints": { "next_tokens": ["b", "b", "b"] }
+        },
+        "7": {
+          "cost": 0.32192809488736235,
+          "constraints": { "prev_classes": ["class_c", "class_c"] }
+        },
+        "8": {
+          "cost": 0.32192809488736235,
+          "constraints": { "prev_classes": ["class_c"], "prev_tokens": ["b"] }
+        },
+        "11": {
+          "cost": 0.32192809488736235,
+          "constraints": { "prev_tokens": ["b", "b"] }
+        },
+        "12": {
+          "cost": 0.41503749927884376,
+          "constraints": { "next_classes": ["class_c"] }
+        },
+        "18": { "cost": 0.5849625007211562 }
+      },
+      "2": {
+        "3": {
+          "cost": 0.22239242133644802,
+          "constraints": {
+            "prev_classes": ["class_c"],
+            "prev_tokens": ["b", "b"]
+          }
+        }
+      },
+      "4": {
+        "5": {
+          "cost": 0.2630344058337938,
+          "constraints": { "next_tokens": ["c"], "next_classes": ["class_b"] }
+        }
+      },
+      "9": {
+        "10": {
+          "cost": 0.32192809488736235,
+          "constraints": { "next_tokens": ["c"], "next_classes": ["class_a"] }
+        }
+      },
+      "13": {
+        "14": { "token": "c", "cost": 0.41503749927884376 },
+        "21": { "cost": 0.5849625007211562 }
+      },
+      "14": { "15": { "cost": 0.41503749927884376 } },
+      "16": {
+        "17": {
+          "cost": 0.41503749927884376,
+          "constraints": { "prev_classes": ["wb"] }
+        }
+      },
+      "19": { "20": { "cost": 0.5849625007211562 } },
+      "22": { "23": { "cost": 0.5849625007211562 } }
+    },
+    "edge_list": [
+      [0, 1],
+      [1, 2],
+      [2, 3],
+      [1, 4],
+      [4, 5],
+      [1, 6],
+      [1, 7],
+      [1, 8],
+      [0, 9],
+      [9, 10],
+      [1, 11],
+      [1, 12],
+      [0, 13],
+      [13, 14],
+      [14, 15],
+      [0, 16],
+      [16, 17],
+      [1, 18],
+      [0, 19],
+      [19, 20],
+      [13, 21],
+      [0, 22],
+      [22, 23]
+    ]
+  },
+  "tokenizer_pattern": "(Aa|a|b|c|\\ |d)",
+  "graphtransliterator_version": "1.0.4"
+}

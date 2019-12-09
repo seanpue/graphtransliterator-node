@@ -1,3 +1,6 @@
+.vscode
+_scratch
+lib/__tests__/test_utmo_to_loc.json
 node_modules
 coverage
 .coveralls.yml

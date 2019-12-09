@@ -63,7 +63,7 @@
     ]
   },
   "scripts": {
-    "pretest": "eslint .",
+    "pretest": "eslint --fix .",
     "test": "jest"
   },
   "repository": "https://github.com/seanpue/graphtransliterator-node.git",
