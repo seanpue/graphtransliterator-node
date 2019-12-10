@@ -7,6 +7,12 @@
 --------------------
 * Add documentation
 
+x.x.x (12-10-2019)
+------------------
+* Added webpack yielding dist/GraphTranliterator.node.js and 
+  dist/GraphTransliterator.
+* Added babel to client config converting from ES6 to CoreJS 3.0
+
 0.2.0 (12-10-2019)
 ------------------
 * Added matchAllAt() to GraphTransliterator
