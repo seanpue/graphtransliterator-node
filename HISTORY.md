@@ -1,11 +1,20 @@
 [Unreleased - Maybe]
 --------------------
 * Add flag for logging full errors or just descriptive message
-* Allow for minimized JSON processing (removal of null, etc)
+* Allow for minimized JSON processing (removal of null, etc), generating separate JS file.
+* Add multiple JS core versions
 
 [Unreleased - To Do]
 --------------------
 * Add documentation
+
+x.x.x (12-10-2019)
+------------------
+* Adjusted webpack.config.js to load transliterators
+* Added update script to copy graphtransliterator transliterators into transliterators
+* Added webpack yielding dist/GraphTranliterator.node.js and 
+  dist/GraphTransliterator.
+* Added babel to client config converting from ES6 to CoreJS 3.0
 
 0.2.0 (12-10-2019)
 ------------------
