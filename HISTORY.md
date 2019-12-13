@@ -8,9 +8,9 @@
 --------------------
 * Add documentation
 
-x.x.x (12-10-2019)
+0.3.0 (12-13-2019)
 ------------------
-* Adjusted webpack.config.js to load transliterators
+* Adjusted webpack.config.js to generator transliterators with babel
 * Added update script to copy graphtransliterator transliterators into transliterators
 * Added webpack yielding dist/GraphTranliterator.node.js and 
   dist/GraphTransliterator.
