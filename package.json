@@ -70,7 +70,8 @@
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jest",
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "update": "python scripts/update_transliterators.py"
   },
   "repository": "https://github.com/seanpue/graphtransliterator-node.git",
   "jest": {
