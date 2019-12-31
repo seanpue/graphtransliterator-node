@@ -1,5 +1,6 @@
 {
   "name": "graphtransliterator",
+  "type": "module",
   "version": "0.3.0",
   "description": "A graph-based transliteration tool",
   "homepage": "https://github.com/seanpue/graphtransliterator-node",
@@ -18,6 +19,7 @@
     "graph"
   ],
   "devDependencies": {
+    "ajv": "^6.10.2",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "coveralls": "^3.0.9",
