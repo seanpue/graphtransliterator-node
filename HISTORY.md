@@ -14,6 +14,7 @@
 
 X.X.X (XX-XX-XXXX)
 ------------------
+* Renamed jest.config.js jest.config.cjs for an esm error
 * Added support for compressed graphs
 * Added graph creation as fromGraph(), as well as onmatchRulesLookupOf(), tokensByClassOf()
 * Added esm for ecmascript management
