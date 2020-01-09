@@ -39,14 +39,7 @@ const ServerConfig = {
     filename: "GraphTransliterator.node.js"
   }
 };
-const ServerConfigExample = {
-  entry: "./lib/transliterators/example/Example.js",
-  mode: "production" /* Change to production later */,
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "GraphTransliterator.Example.node.js"
-  }
-};
+
 const { readdirSync } = require("fs");
 const { join, resolve } = require("path");
 
@@ -67,7 +60,7 @@ var transliteratorConfigs = [];
 function makeConfig(filen, classn) {
   return {
     entry: `./lib/transliterators/${filen}/${classn}.js`,
-    mode: "development" /* Change to production later */,
+    mode: "production",
     module: {
       rules: [
         {
@@ -105,7 +98,5 @@ dirs.forEach(function(dirName) {
   transliteratorConfigs.push(makeConfig(dirName, className));
 });
 
-module.exports = [ClientConfig, ServerConfig, ServerConfigExample].concat(
-  transliteratorConfigs
-);
+module.exports = [ClientConfig, ServerConfig].concat(transliteratorConfigs);
 console.log(module.exports);
