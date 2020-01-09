@@ -1,6 +1,6 @@
 {
   "name": "graphtransliterator",
-  "type": "module",
+  "type": "commonjs",
   "version": "0.3.0",
   "description": "A graph-based transliteration tool",
   "homepage": "https://github.com/seanpue/graphtransliterator-node",
@@ -69,7 +69,7 @@
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jest",
-    "build": "webpack -r esm --config webpack.config.js",
+    "build": "webpack",
     "update": "python scripts/update_transliterators.py"
   },
   "repository": {
@@ -87,8 +87,7 @@
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "babel-jest": "^24.9.0",
-    "core-js": "^3.4.8",
-    "esm": "^3.2.25"
+    "core-js": "^3.4.8"
   },
   "bugs": {
     "url": "https://github.com/seanpue/graphtransliterator-node/issues"
