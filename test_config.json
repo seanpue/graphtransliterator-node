@@ -74,7 +74,7 @@
     { "production": "<D>", "tokens": ["d"], "cost": 0.5849625007211562 },
     { "production": " ", "tokens": [" "], "cost": 0.5849625007211562 }
   ],
-  "whitespace": { "default": " ", "consolidate": true, "token_class": "wb" },
+  "whitespace": { "default": " ", "token_class": "wb", "consolidate": true },
   "onmatch_rules": [
     {
       "prev_classes": ["class_a", "class_b"],
@@ -111,8 +111,8 @@
         }
       },
       {
-        "type": "token",
         "token": "a",
+        "type": "token",
         "ordered_children": {
           "__rules__": [6, 7, 8, 11, 12, 20],
           "a": [2, 6, 7, 8, 11, 12, 20],
@@ -120,66 +120,66 @@
         }
       },
       {
-        "type": "token",
         "token": "a",
+        "type": "token",
         "ordered_children": { "__rules__": [3] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 0 },
+      { "rule_key": 0, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "b",
+        "type": "token",
         "ordered_children": { "__rules__": [5] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 1 },
-      { "type": "rule", "accepting": true, "rule_key": 2 },
-      { "type": "rule", "accepting": true, "rule_key": 3 },
-      { "type": "rule", "accepting": true, "rule_key": 4 },
+      { "rule_key": 1, "type": "rule", "accepting": true },
+      { "rule_key": 2, "type": "rule", "accepting": true },
+      { "rule_key": 3, "type": "rule", "accepting": true },
+      { "rule_key": 4, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "d",
+        "type": "token",
         "ordered_children": { "__rules__": [10, 24], "d": [10, 18, 24] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 5 },
-      { "type": "rule", "accepting": true, "rule_key": 6 },
-      { "type": "rule", "accepting": true, "rule_key": 7 },
+      { "rule_key": 5, "type": "rule", "accepting": true },
+      { "rule_key": 6, "type": "rule", "accepting": true },
+      { "rule_key": 7, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "c",
+        "type": "token",
         "ordered_children": { "__rules__": [23], "c": [14, 23] }
       },
       {
-        "type": "token",
         "token": "c",
+        "type": "token",
         "ordered_children": { "__rules__": [15] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 8 },
+      { "rule_key": 8, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "Aa",
+        "type": "token",
         "ordered_children": { "__rules__": [17] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 9 },
+      { "rule_key": 9, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "d",
+        "type": "token",
         "ordered_children": { "__rules__": [19] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 10 },
-      { "type": "rule", "accepting": true, "rule_key": 11 },
+      { "rule_key": 10, "type": "rule", "accepting": true },
+      { "rule_key": 11, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": "b",
+        "type": "token",
         "ordered_children": { "__rules__": [22] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 12 },
-      { "type": "rule", "accepting": true, "rule_key": 13 },
-      { "type": "rule", "accepting": true, "rule_key": 14 },
+      { "rule_key": 12, "type": "rule", "accepting": true },
+      { "rule_key": 13, "type": "rule", "accepting": true },
+      { "rule_key": 14, "type": "rule", "accepting": true },
       {
-        "type": "token",
         "token": " ",
+        "type": "token",
         "ordered_children": { "__rules__": [26] }
       },
-      { "type": "rule", "accepting": true, "rule_key": 15 }
+      { "rule_key": 15, "type": "rule", "accepting": true }
     ],
     "edge_list": [
       [0, 1],
@@ -211,70 +211,70 @@
     ],
     "edge": {
       "0": {
-        "1": { "cost": 0.22239242133644802, "token": "a" },
-        "9": { "cost": 0.32192809488736235, "token": "d" },
-        "13": { "cost": 0.41503749927884376, "token": "c" },
-        "16": { "cost": 0.41503749927884376, "token": "Aa" },
-        "21": { "cost": 0.5849625007211562, "token": "b" },
-        "25": { "cost": 0.5849625007211562, "token": " " }
+        "1": { "token": "a", "cost": 0.22239242133644802 },
+        "9": { "token": "d", "cost": 0.32192809488736235 },
+        "13": { "token": "c", "cost": 0.41503749927884376 },
+        "16": { "token": "Aa", "cost": 0.41503749927884376 },
+        "21": { "token": "b", "cost": 0.5849625007211562 },
+        "25": { "token": " ", "cost": 0.5849625007211562 }
       },
       "1": {
-        "2": { "cost": 0.22239242133644802, "token": "a" },
-        "4": { "cost": 0.2630344058337938, "token": "b" },
+        "2": { "token": "a", "cost": 0.22239242133644802 },
+        "4": { "token": "b", "cost": 0.2630344058337938 },
         "6": {
-          "cost": 0.2630344058337938,
-          "constraints": { "next_tokens": ["b", "b", "b"] }
+          "constraints": { "next_tokens": ["b", "b", "b"] },
+          "cost": 0.2630344058337938
         },
         "7": {
-          "cost": 0.32192809488736235,
-          "constraints": { "prev_classes": ["class_c", "class_c"] }
+          "constraints": { "prev_classes": ["class_c", "class_c"] },
+          "cost": 0.32192809488736235
         },
         "8": {
-          "cost": 0.32192809488736235,
-          "constraints": { "prev_tokens": ["b"], "prev_classes": ["class_c"] }
+          "constraints": { "prev_classes": ["class_c"], "prev_tokens": ["b"] },
+          "cost": 0.32192809488736235
         },
         "11": {
-          "cost": 0.32192809488736235,
-          "constraints": { "prev_tokens": ["b", "b"] }
+          "constraints": { "prev_tokens": ["b", "b"] },
+          "cost": 0.32192809488736235
         },
         "12": {
-          "cost": 0.41503749927884376,
-          "constraints": { "next_classes": ["class_c"] }
+          "constraints": { "next_classes": ["class_c"] },
+          "cost": 0.41503749927884376
         },
         "20": { "cost": 0.5849625007211562 }
       },
       "2": {
         "3": {
-          "cost": 0.22239242133644802,
           "constraints": {
-            "prev_tokens": ["b", "b"],
-            "prev_classes": ["class_c"]
-          }
+            "prev_classes": ["class_c"],
+            "prev_tokens": ["b", "b"]
+          },
+          "cost": 0.22239242133644802
         }
       },
       "4": {
         "5": {
-          "cost": 0.2630344058337938,
-          "constraints": { "next_tokens": ["c"], "next_classes": ["class_b"] }
+          "constraints": { "next_classes": ["class_b"], "next_tokens": ["c"] },
+          "cost": 0.2630344058337938
         }
       },
       "9": {
         "10": {
-          "cost": 0.32192809488736235,
-          "constraints": { "next_tokens": ["c"], "next_classes": ["class_a"] }
+          "constraints": { "next_classes": ["class_a"], "next_tokens": ["c"] },
+          "cost": 0.32192809488736235
         },
-        "18": { "cost": 0.41503749927884376, "token": "d" },
+        "18": { "token": "d", "cost": 0.41503749927884376 },
         "24": { "cost": 0.5849625007211562 }
       },
       "13": {
-        "14": { "cost": 0.41503749927884376, "token": "c" },
+        "14": { "token": "c", "cost": 0.41503749927884376 },
         "23": { "cost": 0.5849625007211562 }
       },
       "14": { "15": { "cost": 0.41503749927884376 } },
       "16": {
         "17": {
-          "cost": 0.41503749927884376,
-          "constraints": { "prev_classes": ["wb"] }
+          "constraints": { "prev_classes": ["wb"] },
+          "cost": 0.41503749927884376
         }
       },
       "18": { "19": { "cost": 0.41503749927884376 } },

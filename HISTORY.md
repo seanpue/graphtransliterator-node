@@ -3,14 +3,26 @@
 * Add flag for logging full errors or just descriptive message
 * Allow for minimized JSON processing (removal of null, etc), generating separate JS file.
 * Add multiple JS core versions
+* Reconsider babel, ecmascript configuration
+* Add compression functions
+* Speedtest compressed vs. uncompressed graph versions
 
 [Unreleased - To Do]
 --------------------
-* Add documentation
+* Add documentation (using sphinx-js?)
+* Update bundled transliterators with compressed versions
+
+X.X.X (XX-XX-XXXX)
+------------------
+* Removed esm support due to difficulty configuring to work with jest
+* Added support for compressed graphs
+* Added graph creation as fromGraph(), as well as onmatchRulesLookupOf(), tokensByClassOf()
+* Added esm for ecmascript management
+
 
 0.3.0 (12-13-2019)
 ------------------
-* Adjusted webpack.config.js to generator transliterators with babel
+* Adjusted webpack.config.js to generate transliterators with babel
 * Added update script to copy graphtransliterator transliterators into transliterators
 * Added webpack yielding dist/GraphTranliterator.node.js and 
   dist/GraphTransliterator.

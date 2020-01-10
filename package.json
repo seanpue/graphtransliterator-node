@@ -1,23 +1,22 @@
 {
   "name": "graphtransliterator",
+  "type": "commonjs",
   "version": "0.3.0",
   "description": "A graph-based transliteration tool",
   "homepage": "https://github.com/seanpue/graphtransliterator-node",
-  "author": {
-    "name": "A. Sean Pue",
-    "email": "pue@msu.edu",
-    "url": "https://seanpue.com"
-  },
+  "author": "A. Sean Pue <pue@msu.edu> (https://seanpue.com)",
   "files": [
     "dist"
   ],
   "main": "lib/index.js",
+  "module": "lib/main.js",
   "keywords": [
     "transliteration",
     "language",
     "graph"
   ],
   "devDependencies": {
+    "ajv": "^6.10.2",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "coveralls": "^3.0.9",
@@ -70,10 +69,13 @@
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jest",
-    "build": "webpack --config webpack.config.js",
+    "build": "webpack",
     "update": "python scripts/update_transliterators.py"
   },
-  "repository": "https://github.com/seanpue/graphtransliterator-node.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanpue/graphtransliterator-node.git"
+  },
   "jest": {
     "testEnvironment": "node",
     "transform": {
@@ -86,5 +88,11 @@
     "@babel/preset-env": "^7.7.6",
     "babel-jest": "^24.9.0",
     "core-js": "^3.4.8"
+  },
+  "bugs": {
+    "url": "https://github.com/seanpue/graphtransliterator-node/issues"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

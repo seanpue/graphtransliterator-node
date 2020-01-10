@@ -2,7 +2,7 @@
 
 """Console script for graphtransliterator-node to update transliterators."""
 
-import graphtransliterator
+from graphtransliterator import GraphTransliterator
 import graphtransliterator.transliterators
 import jinja2
 import json
@@ -20,7 +20,7 @@ module.exports = {{ class_name }}Transliterator;
 PATH_TO_GRAPHTRANSLITERATOR_NODE = "."
 TRANSLITERATORS_PATH = os.path.join(PATH_TO_GRAPHTRANSLITERATOR_NODE, "lib", "transliterators")
 
-overwrite_classes = False
+overwrite_classes = True
 
 def test_cwd():
     """Check running from root directory of node module."""
@@ -39,15 +39,17 @@ def make_json():
     filen = os.path.join(js_path, json_filen)
     try:
         with open(filen, "r") as f:
-            js_json = json.load(f)
-        if js_json['metadata']['version'] <= version:
+            js_json = f.read()
+        gt = GraphTransliterator.loads(js_json)
+        assert gt.metadata['version'] <= transliterator.metadata['version']
+        if gt.metadata['version'] == transliterator.metadata['version']:
             print(f"   Skipping {json_filen}.")
             return
     except FileNotFoundError:
         pass
     
     with open(filen, "w") as f:
-        json.dump(transliterator_data, f)
+        f.write(transliterator.dumps())
 
 def make_class():
     """Create Node class."""
@@ -68,6 +70,7 @@ def make_class():
 
 
 if __name__ == "__main__":
+    import pdb; pdb.set_trace()
     print("Updating transliterators")
     test_cwd()
     template = jinja2.Template(JS_CLASS_SOURCE)
@@ -75,9 +78,6 @@ if __name__ == "__main__":
         class_name = type(transliterator).__name__
         module_name = transliterator.name
         json_filen = os.path.join(transliterator.directory, module_name) + ".json"
-        with open(json_filen, 'r') as f:
-            transliterator_data = json.load(f)
-            version = transliterator_data['metadata']['version']
         js_path = os.path.join(TRANSLITERATORS_PATH, module_name)
         json_filen = module_name + ".json"
         class_filen = class_name + ".js"
