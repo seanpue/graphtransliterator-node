@@ -12,7 +12,7 @@
 * Add documentation (using sphinx-js?)
 * Update bundled transliterators with compressed versions
 
-X.X.X (01-10-2020)
+0.4.1 (01-10-2020)
 ------------------
 * adjusted node engine requirement in package.json
 * fixed files setting in package.json to include lib
@@ -61,5 +61,5 @@ X.X.X (01-10-2020)
 * Restricted to node >= 12.0.0 in package.json
 * Removed pre-12 versions of node from .travis.yml
 * Added HISTORY.md
-* Initialized using yeoman node
+* Initialized using yeoman node (https://github.com/yeoman/generator-node)
 
