@@ -33,7 +33,7 @@ const ClientConfig = {
 
 const ServerConfig = {
   entry: "./lib/GraphTransliterator.js",
-  mode: "production" /* Change to production later */,
+  mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "GraphTransliterator.node.js"

@@ -6,7 +6,8 @@
   "homepage": "https://github.com/seanpue/graphtransliterator-node",
   "author": "A. Sean Pue <pue@msu.edu> (https://seanpue.com)",
   "files": [
-    "dist"
+    "dist",
+    "lib"
   ],
   "main": "lib/index.js",
   "module": "lib/main.js",
@@ -33,7 +34,7 @@
     "webpack-cli": "^3.3.10"
   },
   "engines": {
-    "npm": ">= 12.0.0"
+    "node": ">= 12.0.0"
   },
   "lint-staged": {
     "*.js": [

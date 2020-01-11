@@ -12,7 +12,12 @@
 * Add documentation (using sphinx-js?)
 * Update bundled transliterators with compressed versions
 
-X.X.X (XX-XX-XXXX)
+X.X.X (01-10-2020)
+------------------
+* adjusted node engine requirement in package.json
+* fixed files setting in package.json to include lib
+
+0.4.0 (01-10-2020)
 ------------------
 * Removed esm support due to difficulty configuring to work with jest
 * Added support for compressed graphs
