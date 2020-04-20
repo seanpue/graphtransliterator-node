@@ -1,42 +1,60 @@
 [Unreleased - Maybe]
 --------------------
+
 * Add flag for logging full errors or just descriptive message
-* Allow for minimized JSON processing (removal of null, etc), generating separate JS file.
 * Add multiple JS core versions
 * Reconsider babel, ecmascript configuration
 * Add compression functions
-* Speedtest compressed vs. uncompressed graph versions
+* add tests? Bundled are pretested in Python, but it might be useful.
 
 [Unreleased - To Do]
 --------------------
+
+* Make sure if works in Vue, etc.
 * Add documentation (using sphinx-js?)
-* Update bundled transliterators with compressed versions
+* fix transliterators/index.js
+
+
+?.?.? (xx-xx-xxxx)
+------------------
+
+* wrote scripts/updateTransliterators.js and changed bundled transliterator naming format
+* Added decompressSettings in compress.js
+* Updated bundled transliterators with faster (less to download and quicker to load than expanded JSON) compressed versions
+
+0.4.2 (01-11-2020)
+------------------
+
+* removed lib/__tests__ from dist
 
 0.4.1 (01-10-2020)
 ------------------
+
 * adjusted node engine requirement in package.json
 * fixed files setting in package.json to include lib
 
 0.4.0 (01-10-2020)
 ------------------
+
 * Removed esm support due to difficulty configuring to work with jest
 * Added support for compressed graphs
 * Added graph creation as fromGraph(), as well as onmatchRulesLookupOf(), tokensByClassOf()
 * Added esm for ecmascript management
 
-
 0.3.0 (12-13-2019)
 ------------------
+
 * Adjusted webpack.config.js to generate transliterators with babel
 * Added update script to copy graphtransliterator transliterators into transliterators
-* Added webpack yielding dist/GraphTranliterator.node.js and 
+* Added webpack yielding dist/GraphTranliterator.node.js and
   dist/GraphTransliterator.
 * Added babel to client config converting from ES6 to CoreJS 3.0
 
 0.2.0 (12-10-2019)
 ------------------
+
 * Added matchAllAt() to GraphTransliterator
-* Added console logging of error message or throwing of errors if 
+* Added console logging of error message or throwing of errors if
   ignoreErrors is false. 
 * Added NoMatchingTransliterationRuleError, UnrecognizableInputError,
   GraphTransliteratorError
@@ -61,5 +79,4 @@
 * Restricted to node >= 12.0.0 in package.json
 * Removed pre-12 versions of node from .travis.yml
 * Added HISTORY.md
-* Initialized using yeoman node (https://github.com/yeoman/generator-node)
-
+* Initialized using yeoman node [https://github.com/yeoman/generator-node]

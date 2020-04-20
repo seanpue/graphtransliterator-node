@@ -1,8 +1,10 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """Console script for graphtransliterator-node to update transliterators."""
 
 from graphtransliterator import GraphTransliterator
+from pathlib import Path
 import graphtransliterator.transliterators
 import jinja2
 import json
@@ -21,6 +23,7 @@ PATH_TO_GRAPHTRANSLITERATOR_NODE = "."
 TRANSLITERATORS_PATH = os.path.join(PATH_TO_GRAPHTRANSLITERATOR_NODE, "lib", "transliterators")
 
 overwrite_classes = True
+
 
 def test_cwd():
     """Check running from root directory of node module."""
@@ -42,14 +45,10 @@ def make_json():
             js_json = f.read()
         gt = GraphTransliterator.loads(js_json)
         assert gt.metadata['version'] <= transliterator.metadata['version']
-        if gt.metadata['version'] == transliterator.metadata['version']:
-            print(f"   Skipping {json_filen}.")
-            return
     except FileNotFoundError:
         pass
-    
     with open(filen, "w") as f:
-        f.write(transliterator.dumps())
+        f.write(js_json)
 
 def make_class():
     """Create Node class."""
@@ -77,10 +76,12 @@ if __name__ == "__main__":
     for transliterator in graphtransliterator.transliterators.iter_transliterators():
         class_name = type(transliterator).__name__
         module_name = transliterator.name
-        json_filen = os.path.join(transliterator.directory, module_name) + ".json"
-        js_path = os.path.join(TRANSLITERATORS_PATH, module_name)
-        json_filen = module_name + ".json"
-        class_filen = class_name + ".js"
+        orig_json_filen = os.path.join(transliterator.directory, module_name) + ".json"
+        output_js_dir = os.path.join(TRANSLITERATORS_PATH, class_name)
+        Path(output_js_dir).mkdir(parents=False, exist_ok=True)
+        output_json_filen = os.path.join(output_js_path, module_name + ".json")
+        output_class_filen = os.path.join(output_js_path, class_name + ".js")
+
         make_json()
         make_class()
    
