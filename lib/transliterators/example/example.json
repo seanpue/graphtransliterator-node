@@ -1,17 +1,17 @@
 {
   "graphtransliterator_version": "1.1.0",
   "compressed_settings": [
-    ["vowel", "consonant", "whitespace"],
+    ["consonant", "vowel", "whitespace"],
     [" ", "a", "b"],
-    [[2], [0], [1]],
+    [[2], [1], [0]],
     [
-      ["!B!", [1], [1], [2], [1], [1], -5],
+      ["!B!", [0], [1], [2], [1], [0], -5],
       ["A", 0, 0, [1], 0, 0, -1],
       ["B", 0, 0, [2], 0, 0, -1],
       [" ", 0, 0, [0], 0, 0, -1]
     ],
     [" ", "whitespace", 0],
-    [[[0], [0], ","]],
+    [[[1], [1], ","]],
     {
       "name": "example",
       "version": "1.0.0",

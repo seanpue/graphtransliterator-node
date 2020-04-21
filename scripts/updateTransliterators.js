@@ -19,6 +19,7 @@ function writeIfDifferent(data, filen) {
     fs.readFileSync(filen, "utf8").trim() !== data.trim()
   ) {
     fs.writeFileSync(filen, data, { encoding: "utf8" });
+    console.log(`updated ${filen}`);
   }
 }
 
@@ -27,8 +28,8 @@ bundledTransliterators.forEach(function(className) {
     `graphtransliterator dump --from bundled ${className}`,
     { encoding: "utf8" }
   );
-  var transliteratorJS = `const ${className}Settings = require("${className}.json");
-const { GraphTransliterator } = require("../../GraphTransliterator");
+  var transliteratorJS = `const ${className}Settings = require("./${className}.json");
+const { GraphTransliterator } = require("../../GraphTransliterator.js");
 const ${className}Transliterator = GraphTransliterator.fromDict(${className}Settings);
 module.exports = ${className}Transliterator;
 `;
