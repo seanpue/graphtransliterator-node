@@ -6,7 +6,7 @@
 * Reconsider babel, ecmascript configuration
 * Add compression functions
 * add tests? Bundled are pretested in Python, but it might be useful.
-
+* remove stripEmpty calls from compress.js
 [Unreleased - To Do]
 --------------------
 
@@ -17,6 +17,7 @@
 ?.?.? (xx-xx-xxxx)
 ------------------
 
+* disabled stripEmpty() in compress.js; will likely remove
 * added "jest--coverage &&" to .travis.yml after_script to provide coverage info to coveralls
 * removed transliterator directories with differently cased names remaining on github
 * rewrote transliterators/index.js with some struggle due to file name errors on travis due

@@ -69,7 +69,7 @@
   },
   "scripts": {
     "pretest": "eslint --fix .",
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack",
     "update": "node ./scripts/updateTransliterators.js"
   },
