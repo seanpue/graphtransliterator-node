@@ -70,7 +70,7 @@
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jest",
-    "build": "webpack",
+    "build": "npm run test && webpack",
     "update": "node ./scripts/updateTransliterators.js"
   },
   "repository": {
