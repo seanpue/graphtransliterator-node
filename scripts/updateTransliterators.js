@@ -27,7 +27,7 @@ bundledTransliterators.forEach(function(className) {
     `graphtransliterator dump --from bundled ${className}`,
     { encoding: "utf8" }
   );
-  var transliteratorJS = `const ${className}Settings = require("./${className}.json");
+  var transliteratorJS = `const ${className}Settings = require("${className}.json");
 const { GraphTransliterator } = require("../../GraphTransliterator");
 const ${className}Transliterator = GraphTransliterator.fromDict(${className}Settings);
 module.exports = ${className}Transliterator;
