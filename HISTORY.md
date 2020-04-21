@@ -7,6 +7,7 @@
 * Add compression functions
 * add tests? Bundled are pretested in Python, but it might be useful.
 * remove stripEmpty calls from compress.js
+
 [Unreleased - To Do]
 --------------------
 
@@ -14,7 +15,7 @@
 * Add documentation (using sphinx-js?)
 
 
-?.?.? (xx-xx-xxxx)
+0.5.0 (04-21-2020)
 ------------------
 
 * disabled stripEmpty() in compress.js; will likely remove
