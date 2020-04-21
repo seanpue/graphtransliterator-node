@@ -12,12 +12,14 @@
 
 * Make sure if works in Vue, etc.
 * Add documentation (using sphinx-js?)
-* fix transliterators/index.js
 
 
 ?.?.? (xx-xx-xxxx)
 ------------------
 
+* added "jest--coverage &&" to .travis.yml after_script to provide coverage info to coveralls
+* removed transliterator directories with differently cased names remaining on github
+* rewrote transliterators/index.js with some struggle due to file name errors on travis due
 * wrote scripts/updateTransliterators.js and changed bundled transliterator naming format
 * Added decompressSettings in compress.js
 * Updated bundled transliterators with faster (less to download and quicker to load than expanded JSON) compressed versions
