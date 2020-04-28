@@ -3,4 +3,10 @@
 
 # graphtransliterator-node
 
-A graph-based transliteration tool for Node
+A graph-based transliteration tool for Node/JavaScript.
+
+This module brings the Python [graphtransliterator](https://graphtransliterator.readthedocs.io) module and command-line interface to Node and Javascript.
+
+It generally follows the Python module and offers a subset of its features, including bundled transliterators.
+
+Documentation is in progress.

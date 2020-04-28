@@ -1,5 +1,5 @@
 {
-  "graphtransliterator_version": "1.1.0",
+  "graphtransliterator_version": "1.1.1",
   "compressed_settings": [
     ["consonant", "vowel", "vowel_sign", "wb", "whitespace"],
     [

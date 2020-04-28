@@ -1,0 +1,3 @@
+sphinx-js==2.8
+jupyter_sphinx==0.2.3
+m2r==0.2.1

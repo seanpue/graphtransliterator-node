@@ -28,12 +28,6 @@ bundledTransliterators.forEach(function(className) {
     `graphtransliterator dump --from bundled ${className}`,
     { encoding: "utf8" }
   );
-  var transliteratorJS = `const { GraphTransliterator } = require("../../GraphTransliterator.js");
-const ${className}Settings = require("./${className}.json");
-const ${className}Transliterator = GraphTransliterator.fromDict(${className}Settings);
-module.exports = ${className}Transliterator;
-`;
-
   let outputdir = path.join(
     __dirname,
     "..",
@@ -47,7 +41,21 @@ module.exports = ${className}Transliterator;
   }
 
   let JSONfilen = path.join(outputdir, className + ".json");
+  /* Turning individual index.js creation this off for now, as surfacing from index.js:
+  var transliteratorJS = `const { GraphTransliterator } = require("../../GraphTransliterator.js");
+const ${className}Settings = require("./${className}.json");
+const ${className}Transliterator = GraphTransliterator.fromDict(${className}Settings);
+module.exports = ${className}Transliterator;
+`;
+
   let JSfilen = path.join(outputdir, className + ".js");
+  writeIfDifferent(transliteratorJS, JSfilen); \
+  */
   writeIfDifferent(transliteratorJSON, JSONfilen);
-  writeIfDifferent(transliteratorJS, JSfilen);
 });
+
+let rstdoc = bundledTransliterators
+  .map(x => ".. autoclass:: " + x)
+  .join("\n\n");
+
+writeIfDifferent(rstdoc, "docs/transliterators.inc");
