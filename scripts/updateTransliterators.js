@@ -59,3 +59,28 @@ let rstdoc = bundledTransliterators
   .join("\n\n");
 
 writeIfDifferent(rstdoc, "docs/transliterators.inc");
+
+let indexjs =
+  `/**
+* Graph Transliterator's bundled transliterators
+*
+* @module transliterators
+*
+*/
+
+const { Bundled } = require("./bundled.js");` +
+  bundledTransliterators
+    .map(
+      x => `
+/**
+ * ${x} transliterator
+ * @class transliterators${x}
+ * @extends BundledTransliterator
+ */
+module.exports.${x} = () => new Bundled(
+  "./${x}/${x}.json"
+)`
+    )
+    .join("\n");
+
+writeIfDifferent(indexjs, "lib/transliterators/index.js");

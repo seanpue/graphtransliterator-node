@@ -1,31 +1,34 @@
 [Unreleased - Maybe]
 --------------------
 
+
 * Add flag for logging full errors or just descriptive message
 * Add multiple JS core versions
 * Reconsider babel, ecmascript configuration
 * Add compression functions
 * add tests? Bundled are pretested in Python, but it might be useful.
 * remove stripEmpty calls from compress.js
-* Add jsdoc strings to generated transliterators
+
 * Add pre- and post-transliteration hooks
-* Generate RST as part of transliterator bundling?
 * move build transliterators to git submodule (maybe)
 
 [Unreleased - To Do]
 --------------------
 
 * Make sure if works in Vue, etc.
-* Add documentation (using sphinx-js?)
-* Fix serialization discrepencies whereby JSON is not matching and update is regenerating
+* Finish documentation
+* Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
 ?.?.? (??-??-????)
 ------------------
 
-* added `scripts/update_transliterators` script to generate transliterators/index.js and docs/transliterators.inc
-  after updating, now using `graphtransliterator` CLI.
-* removed bundled transliterator index.js and surfacing from transliterators/index.js
-* Got js-sphinx working mostly
+* updated `update_transliterators.js` with jsdoc strings
+  generated for transliterators
+* Removed "git add" from package.json for lint-staged
+* added .eslintconfig as eslint was getting stuck
+* added `scripts/update_transliterators.js` script to generate transliterators/index.js and docs/transliterators.inc to sync bundled transliterators with `graphtransliterator` using its CLI
+* removed bundled transliterators' index.js and surfacing from transliterators/index.js
+* Got js-sphinx working
 * Experiments with jsdoc and js-sphinx, following some issues with bundled transliterators
   and jsdoc namespace.
 * Added basic documentation to javascript.

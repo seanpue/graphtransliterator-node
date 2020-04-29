@@ -1,3 +1,3 @@
-.. autoclass:: transliterators/Example
+.. autoclass:: Example
 
-.. autoclass:: transliterators/ITRANSDevanagariToUnicode
+.. autoclass:: ITRANSDevanagariToUnicode
