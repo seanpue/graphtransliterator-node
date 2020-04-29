@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Graph Transliterator Javascript"
+project = "Graph Transliterator for Node"
 copyright = "2020, Michigan State University"
 author = "A. Sean Pue"
 
