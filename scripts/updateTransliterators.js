@@ -74,7 +74,7 @@ const { Bundled } = require("./bundled.js");` +
       x => `
 /**
  * ${x} transliterator
- * @class transliterators${x}
+ * @class transliterators/${x}
  * @extends BundledTransliterator
  */
 module.exports.${x} = () => new Bundled(

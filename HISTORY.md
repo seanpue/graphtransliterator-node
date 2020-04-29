@@ -8,7 +8,6 @@
 * Add compression functions
 * add tests? Bundled are pretested in Python, but it might be useful.
 * remove stripEmpty calls from compress.js
-
 * Add pre- and post-transliteration hooks
 * move build transliterators to git submodule (maybe)
 
@@ -19,7 +18,7 @@
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
-?.?.? (??-??-????)
+0.5.1 (04-29-2020)
 ------------------
 
 * updated `update_transliterators.js` with jsdoc strings
