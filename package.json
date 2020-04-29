@@ -1,7 +1,7 @@
 {
   "name": "graphtransliterator",
   "type": "commonjs",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A graph-based transliteration tool",
   "homepage": "https://github.com/seanpue/graphtransliterator-node",
   "author": "A. Sean Pue <pue@msu.edu> (https://seanpue.com)",
