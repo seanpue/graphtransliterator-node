@@ -4,5 +4,5 @@ _scratch
 node_modules
 coverage
 .coveralls.yml
-_build
+docs/_build
 docs/out

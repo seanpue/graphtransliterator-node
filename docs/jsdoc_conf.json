@@ -4,6 +4,6 @@
     "excludePattern": "(^|\\/|\\\\)_"
   },
   "opts": {
-    "recurse": false
+    "recurse": true
   }
 }
