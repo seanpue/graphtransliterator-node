@@ -10,6 +10,7 @@
 * remove stripEmpty calls from compress.js
 * Add pre- and post-transliteration hooks
 * move build transliterators to git submodule (maybe)
+* implement jupyter_sphinx(already included in conf.py) with node kernel in docs
 
 [Unreleased - To Do]
 --------------------
