@@ -9,7 +9,8 @@
     "url": "https://seanpue.com"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist"
   ],
   "main": "lib/index.js",
   "keywords": [
@@ -46,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run build && lint-staged"
     }
   },
   "eslintConfig": {
@@ -68,7 +69,8 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
-    "update-transliterators": "node scripts/updateTransliterators.js"
+    "update-transliterators": "node scripts/updateTransliterators.js",
+    "build": "webpack"
   },
   "repository": "seanpue/graphtransliterator-js",
   "jest": {

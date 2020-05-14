@@ -19,6 +19,11 @@
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
+0.6.1 (05-14-2020)
+------------------
+* added dist to files in package.json
+* added build script to package.json
+
 0.6.0 (05-14-2020)
 ------------------
 * rebuilt from scratch
