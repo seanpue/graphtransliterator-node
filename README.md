@@ -1,29 +1,29 @@
-# graphtransliteratorjs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# graphtransliterator-js [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A graph-based transliteration tool for Javascript
 
 ## Installation
 
 ```sh
-$ npm install --save graphtransliteratorjs
+$ npm install --save graphtransliterator
 ```
 
 ## Usage
 
 ```js
-const graphtransliteratorjs = require('graphtransliteratorjs');
+const graphtransliterator = require('graphtransliterator');
 
-graphtransliteratorjs('Rainbow');
+graphtransliterator.transliterators.Example.transliterate("a");
 ```
 ## License
 
 MIT © [A. Sean Pue](https://seanpue.com)
 
 
-[npm-image]: https://badge.fury.io/js/graphtransliteratorjs.svg
-[npm-url]: https://npmjs.org/package/graphtransliteratorjs
-[travis-image]: https://travis-ci.com/seanpue/graphtransliteratorjs.svg?branch=master
-[travis-url]: https://travis-ci.com/seanpue/graphtransliteratorjs
-[daviddm-image]: https://david-dm.org/seanpue/graphtransliteratorjs.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/seanpue/graphtransliteratorjs
-[coveralls-image]: https://coveralls.io/repos/seanpue/graphtransliteratorjs/badge.svg
-[coveralls-url]: https://coveralls.io/r/seanpue/graphtransliteratorjs
+[npm-image]: https://badge.fury.io/js/graphtransliterator.svg
+[npm-url]: https://npmjs.org/package/graphtransliterator
+[travis-image]: https://travis-ci.com/seanpue/graphtransliterator-js.svg?branch=master
+[travis-url]: https://travis-ci.com/seanpue/graphtransliterator-js
+[daviddm-image]: https://david-dm.org/seanpue/graphtransliterator-js.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/seanpue/graphtransliterator-js
+[coveralls-image]: https://coveralls.io/repos/seanpue/graphtransliterator-js/badge.svg
+[coveralls-url]: https://coveralls.io/r/seanpue/graphtransliterator-js

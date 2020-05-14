@@ -1,8 +1,8 @@
 {
-  "name": "graphtransliteratorjs",
-  "version": "0.0.0",
+  "name": "graphtransliterator",
+  "version": "0.5.1",
   "description": "A graph-based transliterator for Javascript",
-  "homepage": "https://github.com/seanpue/graphtransliteratorjs",
+  "homepage": "https://github.com/seanpue/graphtransliterator-js",
   "author": {
     "name": "A. Sean Pue",
     "email": "pue@msu.edu",
@@ -70,7 +70,7 @@
     "test": "jest",
     "update-transliterators": "node scripts/updateTransliterators.js"
   },
-  "repository": "seanpue/graphtransliteratorjs",
+  "repository": "seanpue/graphtransliterator-js",
   "jest": {
     "testEnvironment": "node",
     "collectCoverage": true,
