@@ -21,9 +21,8 @@ Graph Transliterator (Javascript)
 
 ========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-A graph-based transliteration tool for Javascript/Node that lets you convert the symbols of one
+Javascript/Node interface to `Graph Transliterator <https://graphtransliterator.rtfd.io>`__, a graph-based transliteration tool that lets you convert the symbols of one
 language or script to those of another using rules that you define.
-
 
 * Free software: MIT license
 * Documentation: https://graphtransliterator-js.readthedocs.io
@@ -35,11 +34,3 @@ Installation
 .. code-block::
 
    $ npm install --save graphtransliterator
-
-Citation
---------
-
-To cite Graph Transliterator, please use:
-
-    Pue, A. Sean (2019). Graph Transliterator: A graph-based transliteration tool.
-    Journal of Open Source Software, 4(44), 1717, https://doi.org/10.21105/joss.01717

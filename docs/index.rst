@@ -1,6 +1,3 @@
-Welcome to Graph Transliterator for Node's documentation!
-=========================================================
-
 .. include:: ../README.rst
 
 .. toctree::
