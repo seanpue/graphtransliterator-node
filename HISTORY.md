@@ -19,7 +19,7 @@
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
-?.?.? (05-14-2020)
+0.6.0 (05-14-2020)
 ------------------
 * rebuilt from scratch
 * updated updatedTransliterators.js
