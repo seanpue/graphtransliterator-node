@@ -1,10 +1,10 @@
 Welcome to Graph Transliterator for Node's documentation!
 =========================================================
 
-.. mdinclude:: ../README.md
+.. include:: ../README.rst
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    api
 
