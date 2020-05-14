@@ -1,12 +1,29 @@
-[![Build Status](https://travis-ci.org/seanpue/graphtransliterator-node.svg?branch=master)](https://travis-ci.org/seanpue/graphtransliterator-node)
-[![Coverage Status](https://coveralls.io/repos/github/seanpue/graphtransliterator-node/badge.svg?branch=master)](https://coveralls.io/github/seanpue/graphtransliterator-node?branch=master)
+# graphtransliteratorjs [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+> A graph-based transliteration tool for Javascript
 
-# graphtransliterator-node
+## Installation
 
-A graph-based transliteration tool for Node/JavaScript.
+```sh
+$ npm install --save graphtransliteratorjs
+```
 
-This module brings the Python [graphtransliterator](https://graphtransliterator.readthedocs.io) module and command-line interface to Node and Javascript.
+## Usage
 
-It generally follows the Python module and offers a subset of its features, including bundled transliterators.
+```js
+const graphtransliteratorjs = require('graphtransliteratorjs');
 
-Documentation is in progress.
+graphtransliteratorjs('Rainbow');
+```
+## License
+
+MIT © [A. Sean Pue](https://seanpue.com)
+
+
+[npm-image]: https://badge.fury.io/js/graphtransliteratorjs.svg
+[npm-url]: https://npmjs.org/package/graphtransliteratorjs
+[travis-image]: https://travis-ci.com/seanpue/graphtransliteratorjs.svg?branch=master
+[travis-url]: https://travis-ci.com/seanpue/graphtransliteratorjs
+[daviddm-image]: https://david-dm.org/seanpue/graphtransliteratorjs.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/seanpue/graphtransliteratorjs
+[coveralls-image]: https://coveralls.io/repos/seanpue/graphtransliteratorjs/badge.svg
+[coveralls-url]: https://coveralls.io/r/seanpue/graphtransliteratorjs

@@ -1,48 +1,47 @@
 {
-  "name": "graphtransliterator",
-  "type": "commonjs",
-  "version": "0.5.1",
-  "description": "A graph-based transliteration tool",
-  "homepage": "https://github.com/seanpue/graphtransliterator-node",
-  "author": "A. Sean Pue <pue@msu.edu> (https://seanpue.com)",
+  "name": "graphtransliteratorjs",
+  "version": "0.0.0",
+  "description": "A graph-based transliterator for Javascript",
+  "homepage": "https://github.com/seanpue/graphtransliteratorjs",
+  "author": {
+    "name": "A. Sean Pue",
+    "email": "pue@msu.edu",
+    "url": "https://seanpue.com"
+  },
   "files": [
-    "dist",
     "lib"
   ],
   "main": "lib/index.js",
-  "module": "lib/main.js",
   "keywords": [
-    "transliteration",
-    "language",
-    "graph"
+    "transliteration"
   ],
   "devDependencies": {
-    "ajv": "^6.12.0",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
-    "coveralls": "^3.0.11",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.6.0",
     "eslint-config-xo": "^0.27.2",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.9",
     "jest": "^24.8.0",
-    "lint-staged": "^10.2.0",
-    "minami": "^1.2.3",
-    "path": "^0.12.7",
+    "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
-    "webpack": "^4.42.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
   "engines": {
-    "node": ">= 12.0.0"
+    "npm": ">= 4.0.0"
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix"
+      "eslint --fix",
+      "git add"
     ],
     "*.json": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   },
   "husky": {
@@ -67,32 +66,16 @@
     ]
   },
   "scripts": {
-    "pretest": "eslint --fix .",
-    "test": "jest --coverage",
-    "build": "webpack",
-    "update": "node ./scripts/updateTransliterators.js"
+    "pretest": "eslint .",
+    "test": "jest",
+    "update-transliterators": "node scripts/updateTransliterators.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seanpue/graphtransliterator-node.git"
-  },
+  "repository": "seanpue/graphtransliteratorjs",
   "jest": {
     "testEnvironment": "node",
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
+    "collectCoverage": true,
+    "coverageDirectory": "coverage"
   },
   "license": "MIT",
-  "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-jest": "^24.9.0",
-    "core-js": "^3.6.5"
-  },
-  "bugs": {
-    "url": "https://github.com/seanpue/graphtransliterator-node/issues"
-  },
-  "directories": {
-    "lib": "lib"
-  }
+  "dependencies": {}
 }

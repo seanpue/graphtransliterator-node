@@ -8,11 +8,12 @@ var path = require("path");
   .match(/(?<=graphtransliterator, version )(.+)/)[0];
 */
 
-var bundledTransliterators = cp
-  .execSync("graphtransliterator list-bundled", { encoding: "utf8" })
-  .match(/(?<= {2}).+/g)
-  .sort();
-
+/**
+ * Write to file (in utf8) only if different
+ *
+ * @param {string} data
+ * @param {string} filen
+ */
 function writeIfDifferent(data, filen) {
   if (
     !fs.existsSync(filen) ||
@@ -23,11 +24,22 @@ function writeIfDifferent(data, filen) {
   }
 }
 
+// Get bundled transliterators using graphtransliterator cli
+var bundledTransliterators = cp
+  .execSync("graphtransliterator list-bundled", { encoding: "utf8" })
+  .match(/(?<= {2}).+/g)
+  .sort();
+
 bundledTransliterators.forEach(function(className) {
   var transliteratorJSON = cp.execSync(
     `graphtransliterator dump --from bundled ${className}`,
     { encoding: "utf8" }
   );
+  var testsJSON = cp
+    .execSync(`graphtransliterator dump-tests --to json ${className}`, {
+      encoding: "utf8"
+    })
+    .trim();
   let outputdir = path.join(
     __dirname,
     "..",
@@ -41,17 +53,29 @@ bundledTransliterators.forEach(function(className) {
   }
 
   let JSONfilen = path.join(outputdir, className + ".json");
-  /* Turning individual index.js creation this off for now, as surfacing from index.js:
-  var transliteratorJS = `const { GraphTransliterator } = require("../../GraphTransliterator.js");
+  let testfilen = path.join(outputdir, className + "_tests.json");
+  // Could add more details from JSON to docstring
+
+  var transliteratorJS = `const { Bundled } = require("../bundled.js");
+
+/**
+ * ${className} transliterator
+ * 
+ * @class transliterators/${className}
+ * @extends Bundled
+ */
+
 const ${className}Settings = require("./${className}.json");
-const ${className}Transliterator = GraphTransliterator.fromDict(${className}Settings);
-module.exports = ${className}Transliterator;
+const ${className}Tests = require("./${className}_tests.json");
+const ${className} = new Bundled(${className}Settings, ${className}Tests);
+
+module.exports = ${className};
 `;
 
-  let JSfilen = path.join(outputdir, className + ".js");
-  writeIfDifferent(transliteratorJS, JSfilen); \
-  */
+  let JSfilen = path.join(outputdir, "index.js");
+  writeIfDifferent(transliteratorJS, JSfilen);
   writeIfDifferent(transliteratorJSON, JSONfilen);
+  writeIfDifferent(testsJSON, testfilen);
 });
 
 let rstdoc = bundledTransliterators
@@ -68,19 +92,14 @@ let indexjs =
 *
 */
 
-const { Bundled } = require("./bundled.js");` +
+const { Bundled } = require("./bundled.js");
+module.exports = {
+  Bundled,
+` +
   bundledTransliterators
-    .map(
-      x => `
-/**
- * ${x} transliterator
- * @class transliterators/${x}
- * @extends BundledTransliterator
- */
-module.exports.${x} = () => new Bundled(
-  "./${x}/${x}.json"
-)`
-    )
-    .join("\n");
+    .map(x => `  ${x}: require(path.join(__dirname,"${x}"))`)
+    .join(",\n") +
+  `
+}`;
 
 writeIfDifferent(indexjs, "lib/transliterators/index.js");

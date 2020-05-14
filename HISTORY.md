@@ -19,6 +19,13 @@
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
+?.?.? (05-14-2020)
+------------------
+* rebuilt from scratch
+* updated updatedTransliterators.js
+* added settings and tests to bundled transliterators
+* confirmed webpack for individual transliterators
+
 0.5.1 (04-29-2020)
 ------------------
 

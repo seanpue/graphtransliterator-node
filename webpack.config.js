@@ -1,42 +1,100 @@
+const fs = require("fs");
 const path = require("path");
 
+const ServerConfig = {
+  mode: "development",
+  target: "node",
+  entry: "./lib/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "graphtransliterator.node.js"
+  }
+};
 const ClientConfig = {
-  entry: "./lib/GraphTransliterator.js",
-  mode: "development" /* Change to production later */,
+  target: "web",
+  mode: "development",
+  entry: "./lib/index.js",
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: "graphtransliterator.js",
+    library: "graphtransliterator"
+  },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: [
-              [
-                "@babel/preset-env",
-                {
-                  useBuiltIns: "entry",
-                  corejs: 3
-                }
-              ]
-            ]
+            presets: ["@babel/preset-env"]
           }
         }
       }
     ]
-  },
-  output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "GraphTransliterator.js",
-    library: "graphtransliterator"
   }
 };
+const getDirectories = source =>
+  fs
+    .readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name);
 
-const ServerConfig = {
-  entry: "./lib/GraphTransliterator.js",
+const baseDir = path.join(__dirname, "lib", "transliterators");
+
+var transliteratorConfigs = [];
+
+function makeConfig(classn) {
+  return {
+    mode: "development",
+    entry: `./lib/transliterators/${classn}/index.js`,
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    useBuiltIns: "entry",
+                    corejs: 3
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      ]
+    },
+    output: {
+      path: path.join(__dirname, "dist"),
+      filename: `GraphTransliterator.${classn}.js`,
+      library: `${classn}`
+    }
+  };
+}
+
+let dirs = getDirectories(baseDir);
+console.log(dirs);
+
+dirs.forEach(function(dirName) {
+  let className = dirName;
+  transliteratorConfigs.push(makeConfig(className)); // ClassName);//makeConfig(fullDirName, className));
+});
+
+module.exports = [ClientConfig, ServerConfig].concat(transliteratorConfigs);
+module.exports.mode = "development";
+
+/*
+Const ServerConfig = {
+  entry: "./lib/index.js",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "GraphTransliterator.node.js"
+    filename: "graphtransliterator.node.js"
   }
 };
 
@@ -59,7 +117,7 @@ var transliteratorConfigs = [];
 
 function makeConfig(filen, classn) {
   return {
-    entry: `./lib/transliterators/${filen}/${classn}.js`,
+    entry: `./lib/transliterators/${filen}/index.js`,
     mode: "production",
     module: {
       rules: [
@@ -98,5 +156,6 @@ dirs.forEach(function(dirName) {
   transliteratorConfigs.push(makeConfig(dirName, className));
 });
 
-module.exports = [ClientConfig, ServerConfig].concat(transliteratorConfigs);
+module.exports = [ClientConfig, ServerConfig];//.concat(transliteratorConfigs);
 console.log(module.exports);
+*/
