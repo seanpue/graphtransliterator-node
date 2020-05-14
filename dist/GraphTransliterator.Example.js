@@ -1,4 +1,3 @@
-/* Check if this changes */
 var Example =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
