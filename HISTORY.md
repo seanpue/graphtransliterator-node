@@ -18,7 +18,7 @@
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
 
-?.?.? (????-??-??)
+0.6.2 (05-15-2020)
 ------------------
 * Fixed documentation
 

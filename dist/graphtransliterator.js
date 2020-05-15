@@ -175,7 +175,7 @@ eval("module.exports = JSON.parse(\"{\\\" \\\":\\\" \\\",\\\"a\\\":\\\"A\\\",\\\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * Example transliterator\n * \n * @class transliterators/Example\n * @extends Bundled\n */\n\n\nvar ExampleSettings = __webpack_require__(/*! ./Example.json */ \"./lib/transliterators/Example/Example.json\");\n\nvar ExampleTests = __webpack_require__(/*! ./Example_tests.json */ \"./lib/transliterators/Example/Example_tests.json\");\n\nvar Example = new Bundled(ExampleSettings, ExampleTests);\nmodule.exports = Example;\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/Example/index.js?");
+eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * Example transliterator\n *\n * @class transliterators/Example\n * @extends Bundled\n */\n\n\nvar ExampleSettings = __webpack_require__(/*! ./Example.json */ \"./lib/transliterators/Example/Example.json\");\n\nvar ExampleTests = __webpack_require__(/*! ./Example_tests.json */ \"./lib/transliterators/Example/Example_tests.json\");\n\nvar Example = new Bundled(ExampleSettings, ExampleTests);\nmodule.exports = Example;\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/Example/index.js?");
 
 /***/ }),
 
@@ -208,7 +208,7 @@ eval("module.exports = JSON.parse(\"{\\\"0\\\":\\\"०\\\",\\\"1\\\":\\\"१\\\"
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * ITRANSDevanagariToUnicode transliterator\n * \n * @class transliterators/ITRANSDevanagariToUnicode\n * @extends Bundled\n */\n\n\nvar ITRANSDevanagariToUnicodeSettings = __webpack_require__(/*! ./ITRANSDevanagariToUnicode.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json\");\n\nvar ITRANSDevanagariToUnicodeTests = __webpack_require__(/*! ./ITRANSDevanagariToUnicode_tests.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json\");\n\nvar ITRANSDevanagariToUnicode = new Bundled(ITRANSDevanagariToUnicodeSettings, ITRANSDevanagariToUnicodeTests);\nmodule.exports = ITRANSDevanagariToUnicode;\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/ITRANSDevanagariToUnicode/index.js?");
+eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * ITRANSDevanagariToUnicode transliterator\n *\n * @class transliterators/ITRANSDevanagariToUnicode\n * @extends Bundled\n */\n\n\nvar ITRANSDevanagariToUnicodeSettings = __webpack_require__(/*! ./ITRANSDevanagariToUnicode.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json\");\n\nvar ITRANSDevanagariToUnicodeTests = __webpack_require__(/*! ./ITRANSDevanagariToUnicode_tests.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json\");\n\nvar ITRANSDevanagariToUnicode = new Bundled(ITRANSDevanagariToUnicodeSettings, ITRANSDevanagariToUnicodeTests);\nmodule.exports = ITRANSDevanagariToUnicode;\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/ITRANSDevanagariToUnicode/index.js?");
 
 /***/ }),
 
@@ -230,7 +230,7 @@ eval("function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol ===
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/**\n* Graph Transliterator's bundled transliterators\n*\n* @module transliterators\n*\n*/\nvar _require = __webpack_require__(/*! ./bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n\nmodule.exports = {\n  Bundled: Bundled,\n  Example: __webpack_require__(/*! ./Example */ \"./lib/transliterators/Example/index.js\"),\n  ITRANSDevanagariToUnicode: __webpack_require__(/*! ./ITRANSDevanagariToUnicode */ \"./lib/transliterators/ITRANSDevanagariToUnicode/index.js\")\n};\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/index.js?");
+eval("/**\n * Graph Transliterator's bundled transliterators\n *\n * @module transliterators\n *\n */\nvar _require = __webpack_require__(/*! ./bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n\nmodule.exports = {\n  Bundled: Bundled,\n  Example: __webpack_require__(/*! ./Example */ \"./lib/transliterators/Example/index.js\"),\n  ITRANSDevanagariToUnicode: __webpack_require__(/*! ./ITRANSDevanagariToUnicode */ \"./lib/transliterators/ITRANSDevanagariToUnicode/index.js\")\n};\n\n//# sourceURL=webpack://graphtransliterator/./lib/transliterators/index.js?");
 
 /***/ })
 

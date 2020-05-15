@@ -163,7 +163,7 @@ eval("module.exports = JSON.parse(\"{\\\" \\\":\\\" \\\",\\\"a\\\":\\\"A\\\",\\\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * Example transliterator\n * \n * @class transliterators/Example\n * @extends Bundled\n */\n\n\nvar ExampleSettings = __webpack_require__(/*! ./Example.json */ \"./lib/transliterators/Example/Example.json\");\n\nvar ExampleTests = __webpack_require__(/*! ./Example_tests.json */ \"./lib/transliterators/Example/Example_tests.json\");\n\nvar Example = new Bundled(ExampleSettings, ExampleTests);\nmodule.exports = Example;\n\n//# sourceURL=webpack://Example/./lib/transliterators/Example/index.js?");
+eval("var _require = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\"),\n    Bundled = _require.Bundled;\n/**\n * Example transliterator\n *\n * @class transliterators/Example\n * @extends Bundled\n */\n\n\nvar ExampleSettings = __webpack_require__(/*! ./Example.json */ \"./lib/transliterators/Example/Example.json\");\n\nvar ExampleTests = __webpack_require__(/*! ./Example_tests.json */ \"./lib/transliterators/Example/Example_tests.json\");\n\nvar Example = new Bundled(ExampleSettings, ExampleTests);\nmodule.exports = Example;\n\n//# sourceURL=webpack://Example/./lib/transliterators/Example/index.js?");
 
 /***/ }),
 
