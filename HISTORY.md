@@ -13,7 +13,6 @@
 [Unreleased - To Do]
 --------------------
 
-* readthedocs project slug is not working; check later or file github issue.
 * Make sure if works in Vue, etc.
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
