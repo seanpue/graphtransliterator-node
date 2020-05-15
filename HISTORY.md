@@ -1,7 +1,6 @@
 [Unreleased - Maybe]
 --------------------
 
-
 * Add flag for logging full errors or just descriptive messages
 * Add multiple JS core versions (?)
 * Add compression functions
@@ -14,6 +13,7 @@
 [Unreleased - To Do]
 --------------------
 
+* readthedocs project slug is not working; check later or file github issue.
 * Make sure if works in Vue, etc.
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
@@ -21,6 +21,7 @@
 0.6.2 (05-15-2020)
 ------------------
 * Fixed documentation
+* Shifted to production in dist
 
 0.6.1 (05-14-2020)
 ------------------
