@@ -8,23 +8,5 @@
 ..     - Repository: https://github.com/seanpue/graphtransliterator-js/
 .. -------------------------------------------------------------------------------------
 
-.. include:: README.rst
+.. include:: ../CODE_OF_CONDUCT.rst
 
-Contents
---------
-
-.. toctree::
-   :maxdepth: 2
-
-   usage
-   api
-   contributing   
-   authors
-   acknowledgments
-   history
-  
-Back Matter
------------
-
-* :ref:`genindex`
-* :ref:`search`

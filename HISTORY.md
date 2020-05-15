@@ -2,15 +2,14 @@
 --------------------
 
 
-* Add flag for logging full errors or just descriptive message
-* Add multiple JS core versions
-* Reconsider babel, ecmascript configuration
+* Add flag for logging full errors or just descriptive messages
+* Add multiple JS core versions (?)
 * Add compression functions
-* add tests? Bundled are pretested in Python, but it might be useful.
 * remove stripEmpty calls from compress.js
 * Add pre- and post-transliteration hooks
-* move build transliterators to git submodule (maybe)
+* move build transliterators to git submodule
 * implement jupyter_sphinx(already included in conf.py) with node kernel in docs
+* consider whether or not to instantiate bundled transliterators
 
 [Unreleased - To Do]
 --------------------
@@ -18,6 +17,10 @@
 * Make sure if works in Vue, etc.
 * Finish documentation
 * Fix serialization discrepencies whereby bundled transliterator JSON is not exact matching
+
+?.?.? (????-??-??)
+------------------
+* Fixed documentation
 
 0.6.1 (05-14-2020)
 ------------------

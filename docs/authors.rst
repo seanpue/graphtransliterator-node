@@ -8,23 +8,12 @@
 ..     - Repository: https://github.com/seanpue/graphtransliterator-js/
 .. -------------------------------------------------------------------------------------
 
-.. include:: README.rst
+=======
+Credits
+=======
 
-Contents
---------
+Development Lead
+----------------
 
-.. toctree::
-   :maxdepth: 2
+* A. Sean Pue `@seanpue <https://github.com/seanpue>`_ <pue@msu.edu>
 
-   usage
-   api
-   contributing   
-   authors
-   acknowledgments
-   history
-  
-Back Matter
------------
-
-* :ref:`genindex`
-* :ref:`search`

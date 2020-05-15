@@ -8,23 +8,10 @@
 ..     - Repository: https://github.com/seanpue/graphtransliterator-js/
 .. -------------------------------------------------------------------------------------
 
-.. include:: README.rst
+================
+Acknowledgements
+================
 
-Contents
---------
-
-.. toctree::
-   :maxdepth: 2
-
-   usage
-   api
-   contributing   
-   authors
-   acknowledgments
-   history
-  
-Back Matter
------------
-
-* :ref:`genindex`
-* :ref:`search`
+Software development was supported by an Andrew W. Mellon Foundation New
+Directions Fellowship (Grant Number 11600613) and by matching funds provided by
+the College of Arts and Letters, Michigan State University.

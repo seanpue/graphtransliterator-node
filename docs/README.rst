@@ -1,3 +1,13 @@
+.. -------------------------------------------------------------------------------------
+.. Note:
+..     This is a documentation source file for Graph Transliterator Javascript.
+..     Certain links and other features will not be accessible from here.
+.. Links:
+..     - Documentation: https://graphtransliterator-js.readthedocs.org
+..     - NPM: https://www.npmjs.com/package/graphtransliterator
+..     - Repository: https://github.com/seanpue/graphtransliterator-js/
+.. -------------------------------------------------------------------------------------
+
 ===============================
 Graph Transliterator Javascript
 ===============================
@@ -76,10 +86,10 @@ Graph Transliterator Javascript provides:
 Installation
 ------------
 
-Graph Transliterator Javascript is a Node.js module. It can be installed using `npm`:
+Graph Transliterator Javascript is a Node.js module. It can be installed using ``npm``:
 
 .. code-block::
 
    $ npm install --save graphtransliterator
 
-It can also be used independently as a Javascript library.
+It can also be used independently as a client-side Javascript library.

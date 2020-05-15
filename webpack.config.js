@@ -34,6 +34,37 @@ const ClientConfig = {
     ]
   }
 };
+const GraphTransliteratorOnlyConfig = {
+  target: "web",
+  mode: "development",
+  entry: "./lib/GraphTransliterator.js",
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "entry",
+                  corejs: 3
+                }
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  },
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: `graphtransliterator.GraphTransliterator.js`,
+    library: "graphtransliterator"
+  }
+};
 const getDirectories = source =>
   fs
     .readdirSync(source, { withFileTypes: true })
@@ -85,7 +116,11 @@ dirs.forEach(function(dirName) {
   transliteratorConfigs.push(makeConfig(className)); // ClassName);//makeConfig(fullDirName, className));
 });
 
-module.exports = [ClientConfig, ServerConfig].concat(transliteratorConfigs);
+module.exports = [
+  ClientConfig,
+  ServerConfig,
+  GraphTransliteratorOnlyConfig
+].concat(transliteratorConfigs);
 module.exports.mode = "development";
 
 /*

@@ -91,15 +91,12 @@ let indexjs =
 * @module transliterators
 *
 */
-
 const { Bundled } = require("./bundled.js");
 module.exports = {
   Bundled,
 ` +
-  bundledTransliterators
-    .map(x => `  ${x}: require(path.join(__dirname,"${x}"))`)
-    .join(",\n") +
+  bundledTransliterators.map(x => `  ${x}: require("./${x}")`).join(",\n") +
   `
-}`;
+};`;
 
 writeIfDifferent(indexjs, "lib/transliterators/index.js");

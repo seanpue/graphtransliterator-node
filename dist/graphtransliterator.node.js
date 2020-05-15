@@ -145,14 +145,69 @@ eval("\n\nconst { DirectedGraph } = __webpack_require__(/*! ./graphs */ \"./lib/
 
 /***/ }),
 
-/***/ "./lib/transliterators sync recursive":
-/*!**********************************!*\
-  !*** ./lib/transliterators sync ***!
-  \**********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./lib/transliterators/Example/Example.json":
+/*!**************************************************!*\
+  !*** ./lib/transliterators/Example/Example.json ***!
+  \**************************************************/
+/*! exports provided: graphtransliterator_version, compressed_settings, default */
+/***/ (function(module) {
 
-eval("function webpackEmptyContext(req) {\n\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\te.code = 'MODULE_NOT_FOUND';\n\tthrow e;\n}\nwebpackEmptyContext.keys = function() { return []; };\nwebpackEmptyContext.resolve = webpackEmptyContext;\nmodule.exports = webpackEmptyContext;\nwebpackEmptyContext.id = \"./lib/transliterators sync recursive\";\n\n//# sourceURL=webpack:///./lib/transliterators_sync?");
+eval("module.exports = JSON.parse(\"{\\\"graphtransliterator_version\\\":\\\"1.2.0\\\",\\\"compressed_settings\\\":[[\\\"consonant\\\",\\\"vowel\\\",\\\"whitespace\\\"],[\\\" \\\",\\\"a\\\",\\\"b\\\"],[[2],[1],[0]],[[\\\"!B!\\\",[0],[1],[2],[1],[0],-5],[\\\"A\\\",0,0,[1],0,0,-1],[\\\"B\\\",0,0,[2],0,0,-1],[\\\" \\\",0,0,[0],0,0,-1]],[\\\" \\\",\\\"whitespace\\\",0],[[[1],[1],\\\",\\\"]],{\\\"name\\\":\\\"example\\\",\\\"version\\\":\\\"1.0.0\\\",\\\"description\\\":\\\"An Example Bundled Transliterator\\\",\\\"url\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/master/transliterator/sample\\\",\\\"author\\\":\\\"Author McAuthorson\\\",\\\"author_email\\\":\\\"author_mcauthorson@msu.edu\\\",\\\"license\\\":\\\"MIT License\\\",\\\"keywords\\\":[\\\"example\\\"],\\\"project_urls\\\":{\\\"Documentation\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/master/graphtransliterator/transliterators/example\\\",\\\"Source\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/graphtransliterator/transliterators/example\\\",\\\"Tracker\\\":\\\"https://github.com/seanpue/graphtransliterator/issues\\\"}},null]}\");\n\n//# sourceURL=webpack:///./lib/transliterators/Example/Example.json?");
+
+/***/ }),
+
+/***/ "./lib/transliterators/Example/Example_tests.json":
+/*!********************************************************!*\
+  !*** ./lib/transliterators/Example/Example_tests.json ***!
+  \********************************************************/
+/*! exports provided:  , a, aa, babab, b, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\" \\\":\\\" \\\",\\\"a\\\":\\\"A\\\",\\\"aa\\\":\\\"A,A\\\",\\\"babab\\\":\\\"BA!B!AB\\\",\\\"b\\\":\\\"B\\\"}\");\n\n//# sourceURL=webpack:///./lib/transliterators/Example/Example_tests.json?");
+
+/***/ }),
+
+/***/ "./lib/transliterators/Example/index.js":
+/*!**********************************************!*\
+  !*** ./lib/transliterators/Example/index.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const { Bundled } = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\");\n\n/**\n * Example transliterator\n * \n * @class transliterators/Example\n * @extends Bundled\n */\n\nconst ExampleSettings = __webpack_require__(/*! ./Example.json */ \"./lib/transliterators/Example/Example.json\");\nconst ExampleTests = __webpack_require__(/*! ./Example_tests.json */ \"./lib/transliterators/Example/Example_tests.json\");\nconst Example = new Bundled(ExampleSettings, ExampleTests);\n\nmodule.exports = Example;\n\n\n//# sourceURL=webpack:///./lib/transliterators/Example/index.js?");
+
+/***/ }),
+
+/***/ "./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json":
+/*!**************************************************************************************!*\
+  !*** ./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json ***!
+  \**************************************************************************************/
+/*! exports provided: graphtransliterator_version, compressed_settings, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"graphtransliterator_version\\\":\\\"1.2.0\\\",\\\"compressed_settings\\\":[[\\\"consonant\\\",\\\"vowel\\\",\\\"vowel_sign\\\",\\\"wb\\\",\\\"whitespace\\\"],[\\\"\\\\t\\\",\\\" \\\",\\\",\\\",\\\".D\\\",\\\".Dh\\\",\\\".N\\\",\\\".a\\\",\\\".h\\\",\\\".m\\\",\\\".n\\\",\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\",\\\"5\\\",\\\"6\\\",\\\"7\\\",\\\"8\\\",\\\"9\\\",\\\"A\\\",\\\"A.c\\\",\\\"AUM\\\",\\\"Ch\\\",\\\"D\\\",\\\"Dh\\\",\\\"G\\\",\\\"GY\\\",\\\"H\\\",\\\"I\\\",\\\"J\\\",\\\"K\\\",\\\"L\\\",\\\"LLI\\\",\\\"LLi\\\",\\\"L^i\\\",\\\"M\\\",\\\"N\\\",\\\"OM\\\",\\\"R\\\",\\\"RRI\\\",\\\"RRi\\\",\\\"R^i\\\",\\\"Rs.\\\",\\\"Sh\\\",\\\"T\\\",\\\"Th\\\",\\\"U\\\",\\\"Y\\\",\\\"^e\\\",\\\"^n\\\",\\\"^o\\\",\\\"a\\\",\\\"a.c\\\",\\\"a.e\\\",\\\"aa\\\",\\\"ai\\\",\\\"au\\\",\\\"b\\\",\\\"bh\\\",\\\"ch\\\",\\\"chh\\\",\\\"d\\\",\\\"dh\\\",\\\"dny\\\",\\\"e\\\",\\\"ee\\\",\\\"f\\\",\\\"g\\\",\\\"gh\\\",\\\"h\\\",\\\"i\\\",\\\"ii\\\",\\\"j\\\",\\\"jh\\\",\\\"j~n\\\",\\\"k\\\",\\\"kSh\\\",\\\"kh\\\",\\\"l\\\",\\\"ld\\\",\\\"m\\\",\\\"n\\\",\\\"o\\\",\\\"p\\\",\\\"ph\\\",\\\"q\\\",\\\"r\\\",\\\"s\\\",\\\"sh\\\",\\\"t\\\",\\\"th\\\",\\\"u\\\",\\\"uu\\\",\\\"v\\\",\\\"x\\\",\\\"y\\\",\\\"z\\\",\\\"zh\\\",\\\"|\\\",\\\"||\\\",\\\"~N\\\",\\\"~Rs.\\\",\\\"~n\\\",\\\"ṅ\\\"],[[3,4],[3,4],[3],[0],[0],[2],[3],[3],[2],[2],[3],[3],[3],[3],[3],[3],[3],[3],[3],[3],[1],[1],[3],[0],[0],[0],[0],[0],[3],[1],[0],[0],[0],[1],[1],[1],[2],[0],[3],[0],[1],[1],[1],[3],[0],[0],[0],[1],[0],[1],[0],[1],[1],[1],[2],[1],[1],[1],[0],[0],[0],[0],[0],[0],[0],[1],[1],[0],[0],[0],[0],[1],[1],[0],[0],[0],[0],[0],[0],[0],[0],[0],[0],[1],[0],[0],[0],[0],[0],[0],[0],[0],[1],[1],[0],[0],[0],[0],[0],[3],[3],[0],[3],[0],[0]],[[\\\"ा\\\",[0],0,[20],0,0,-2],[\\\"ॉ\\\",[0],0,[21],0,0,-2],[\\\"ी\\\",[0],0,[29],0,0,-2],[\\\"ॣ\\\",[0],0,[33],0,0,-2],[\\\"ॢ\\\",[0],0,[34],0,0,-2],[\\\"ॢ\\\",[0],0,[35],0,0,-2],[\\\"ॄ\\\",[0],0,[40],0,0,-2],[\\\"ृ\\\",[0],0,[41],0,0,-2],[\\\"ृ\\\",[0],0,[42],0,0,-2],[\\\"ू\\\",[0],0,[47],0,0,-2],[\\\"ॆ\\\",[0],0,[49],0,0,-2],[\\\"ॊ\\\",[0],0,[51],0,0,-2],[\\\"\\\",[0],0,[52],0,0,-2],[\\\"ॅ\\\",[0],0,[53],0,0,-2],[\\\"ा\\\",[0],0,[55],0,0,-2],[\\\"ै\\\",[0],0,[56],0,0,-2],[\\\"ौ\\\",[0],0,[57],0,0,-2],[\\\"े\\\",[0],0,[65],0,0,-2],[\\\"ी\\\",[0],0,[66],0,0,-2],[\\\"ि\\\",[0],0,[71],0,0,-2],[\\\"ी\\\",[0],0,[72],0,0,-2],[\\\"ो\\\",[0],0,[83],0,0,-2],[\\\"ु\\\",[0],0,[92],0,0,-2],[\\\"ू\\\",[0],0,[93],0,0,-2],[\\\"\\\\t\\\",0,0,[0],0,0,-1],[\\\" \\\",0,0,[1],0,0,-1],[\\\",\\\",0,0,[2],0,0,-1],[\\\"ड़\\\",0,0,[3],0,0,-1],[\\\"ढ़\\\",0,0,[4],0,0,-1],[\\\"ँ\\\",0,0,[5],0,0,-1],[\\\"ऽ\\\",0,0,[6],0,0,-1],[\\\"्‌\\\",0,0,[7],0,0,-1],[\\\"ं\\\",0,0,[8],0,0,-1],[\\\"ं\\\",0,0,[9],0,0,-1],[\\\"०\\\",0,0,[10],0,0,-1],[\\\"१\\\",0,0,[11],0,0,-1],[\\\"२\\\",0,0,[12],0,0,-1],[\\\"३\\\",0,0,[13],0,0,-1],[\\\"४\\\",0,0,[14],0,0,-1],[\\\"५\\\",0,0,[15],0,0,-1],[\\\"६\\\",0,0,[16],0,0,-1],[\\\"७\\\",0,0,[17],0,0,-1],[\\\"८\\\",0,0,[18],0,0,-1],[\\\"९\\\",0,0,[19],0,0,-1],[\\\"आ\\\",0,0,[20],0,0,-1],[\\\"ऑ\\\",0,0,[21],0,0,-1],[\\\"ॐ\\\",0,0,[22],0,0,-1],[\\\"छ\\\",0,0,[23],0,0,-1],[\\\"ड\\\",0,0,[24],0,0,-1],[\\\"ढ\\\",0,0,[25],0,0,-1],[\\\"ग़\\\",0,0,[26],0,0,-1],[\\\"ज्ञ\\\",0,0,[27],0,0,-1],[\\\"ः\\\",0,0,[28],0,0,-1],[\\\"ई\\\",0,0,[29],0,0,-1],[\\\"ज़\\\",0,0,[30],0,0,-1],[\\\"ख़\\\",0,0,[31],0,0,-1],[\\\"ळ\\\",0,0,[32],0,0,-1],[\\\"ॡ\\\",0,0,[33],0,0,-1],[\\\"ऌ\\\",0,0,[34],0,0,-1],[\\\"ऌ\\\",0,0,[35],0,0,-1],[\\\"ं\\\",0,0,[36],0,0,-1],[\\\"ण\\\",0,0,[37],0,0,-1],[\\\"ॐ\\\",0,0,[38],0,0,-1],[\\\"ऱ\\\",0,0,[39],0,0,-1],[\\\"ॠ\\\",0,0,[40],0,0,-1],[\\\"ऋ\\\",0,0,[41],0,0,-1],[\\\"ऋ\\\",0,0,[42],0,0,-1],[\\\"₹\\\",0,0,[43],0,0,-1],[\\\"ष\\\",0,0,[44],0,0,-1],[\\\"ट\\\",0,0,[45],0,0,-1],[\\\"ठ\\\",0,0,[46],0,0,-1],[\\\"ऊ\\\",0,0,[47],0,0,-1],[\\\"य़\\\",0,0,[48],0,0,-1],[\\\"ऎ\\\",0,0,[49],0,0,-1],[\\\"ऩ\\\",0,0,[50],0,0,-1],[\\\"ऒ\\\",0,0,[51],0,0,-1],[\\\"अ\\\",0,0,[52],0,0,-1],[\\\"ऍ\\\",0,0,[53],0,0,-1],[\\\"ॲ\\\",0,0,[54],0,0,-1],[\\\"आ\\\",0,0,[55],0,0,-1],[\\\"ऐ\\\",0,0,[56],0,0,-1],[\\\"औ\\\",0,0,[57],0,0,-1],[\\\"ब\\\",0,0,[58],0,0,-1],[\\\"भ\\\",0,0,[59],0,0,-1],[\\\"च\\\",0,0,[60],0,0,-1],[\\\"छ\\\",0,0,[61],0,0,-1],[\\\"द\\\",0,0,[62],0,0,-1],[\\\"ध\\\",0,0,[63],0,0,-1],[\\\"ज्ञ\\\",0,0,[64],0,0,-1],[\\\"ए\\\",0,0,[65],0,0,-1],[\\\"ई\\\",0,0,[66],0,0,-1],[\\\"फ़\\\",0,0,[67],0,0,-1],[\\\"ग\\\",0,0,[68],0,0,-1],[\\\"घ\\\",0,0,[69],0,0,-1],[\\\"ह\\\",0,0,[70],0,0,-1],[\\\"इ\\\",0,0,[71],0,0,-1],[\\\"ई\\\",0,0,[72],0,0,-1],[\\\"ज\\\",0,0,[73],0,0,-1],[\\\"झ\\\",0,0,[74],0,0,-1],[\\\"ज्ञ\\\",0,0,[75],0,0,-1],[\\\"क\\\",0,0,[76],0,0,-1],[\\\"क्ष\\\",0,0,[77],0,0,-1],[\\\"ख\\\",0,0,[78],0,0,-1],[\\\"ल\\\",0,0,[79],0,0,-1],[\\\"ळ\\\",0,0,[80],0,0,-1],[\\\"म\\\",0,0,[81],0,0,-1],[\\\"न\\\",0,0,[82],0,0,-1],[\\\"ओ\\\",0,0,[83],0,0,-1],[\\\"प\\\",0,0,[84],0,0,-1],[\\\"फ\\\",0,0,[85],0,0,-1],[\\\"क़\\\",0,0,[86],0,0,-1],[\\\"र\\\",0,0,[87],0,0,-1],[\\\"स\\\",0,0,[88],0,0,-1],[\\\"श\\\",0,0,[89],0,0,-1],[\\\"त\\\",0,0,[90],0,0,-1],[\\\"थ\\\",0,0,[91],0,0,-1],[\\\"उ\\\",0,0,[92],0,0,-1],[\\\"ऊ\\\",0,0,[93],0,0,-1],[\\\"व\\\",0,0,[94],0,0,-1],[\\\"क्ष\\\",0,0,[95],0,0,-1],[\\\"य\\\",0,0,[96],0,0,-1],[\\\"ज़\\\",0,0,[97],0,0,-1],[\\\"ऴ\\\",0,0,[98],0,0,-1],[\\\"।\\\",0,0,[99],0,0,-1],[\\\"॥\\\",0,0,[100],0,0,-1],[\\\"ङ\\\",0,0,[101],0,0,-1],[\\\"₹\\\",0,0,[102],0,0,-1],[\\\"ञ\\\",0,0,[103],0,0,-1],[\\\"ङ\\\",0,0,[104],0,0,-1]],[\\\" \\\",\\\"whitespace\\\",0],[[[0],[0],\\\"्\\\"]],{\\\"name\\\":\\\"ITRANSDevanagariToUnicode\\\",\\\"description\\\":\\\"ITRANS Devanagari to Unicode Transliterator\\\",\\\"version\\\":\\\"0.1.0\\\",\\\"url\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/graphtransliterator/transliterators/itrans_devanagari_to_unicode\\\",\\\"author\\\":\\\"A. Sean Pue\\\",\\\"author_email\\\":\\\"pue@msu.edu\\\",\\\"license\\\":\\\"MIT\\\",\\\"keywords\\\":[\\\"devanagari\\\",\\\"ITRANS\\\",\\\"Hindi\\\",\\\"Sanskrit\\\"],\\\"project_urls\\\":{\\\"Documentation\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/master/graphtransliterator/transliterators/itrans_devanagari_to_unicode\\\",\\\"Source\\\":\\\"https://github.com/seanpue/graphtransliterator/tree/graphtransliterator/transliterators/itrans_devanagari_to_unicode\\\",\\\"Tracker\\\":\\\"https://github.com/seanpue/graphtransliterator/issues\\\"}},null]}\");\n\n//# sourceURL=webpack:///./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json?");
+
+/***/ }),
+
+/***/ "./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json":
+/*!********************************************************************************************!*\
+  !*** ./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json ***!
+  \********************************************************************************************/
+/*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 	,  , ,, .D, .Dh, .N, .a, .h, .m, .n, A, A.c, AUM, Ch, D, Dh, G, GY, H, I, J, K, L, LLI, LLi, L^i, M, N, OM, R, RRI, RRi, R^i, Rs., Sh, T, Th, U, Y, ^e, ^n, ^o, a, a.c, a.e, aa, ai, au, b, bh, ch, chh, d, dh, dny, dnyA, dnyA.c, dnyI, dnyLLI, dnyLLi, dnyL^i, dnyRRI, dnyRRi, dnyR^i, dnyU, dny^e, dny^o, dnya, dnya.c, dnyaa, dnyai, dnyau, dnydny, dnye, dnyee, dnyi, dnyii, dnyo, dnyu, dnyuu, e, ee, f, g, gh, h, i, ii, j, jh, j~n, k, kSh, kh, l, ld, m, n, o, p, ph, q, r, s, sh, t, th, u, uu, v, x, y, z, zh, |, ||, ~N, ~Rs., ~n, ṅ, default */
+/***/ (function(module) {
+
+eval("module.exports = JSON.parse(\"{\\\"0\\\":\\\"०\\\",\\\"1\\\":\\\"१\\\",\\\"2\\\":\\\"२\\\",\\\"3\\\":\\\"३\\\",\\\"4\\\":\\\"४\\\",\\\"5\\\":\\\"५\\\",\\\"6\\\":\\\"६\\\",\\\"7\\\":\\\"७\\\",\\\"8\\\":\\\"८\\\",\\\"9\\\":\\\"९\\\",\\\"\\\\t\\\":\\\"\\\\t\\\",\\\" \\\":\\\" \\\",\\\",\\\":\\\",\\\",\\\".D\\\":\\\"ड़\\\",\\\".Dh\\\":\\\"ढ़\\\",\\\".N\\\":\\\"ँ\\\",\\\".a\\\":\\\"ऽ\\\",\\\".h\\\":\\\"्‌\\\",\\\".m\\\":\\\"ं\\\",\\\".n\\\":\\\"ं\\\",\\\"A\\\":\\\"आ\\\",\\\"A.c\\\":\\\"ऑ\\\",\\\"AUM\\\":\\\"ॐ\\\",\\\"Ch\\\":\\\"छ\\\",\\\"D\\\":\\\"ड\\\",\\\"Dh\\\":\\\"ढ\\\",\\\"G\\\":\\\"ग़\\\",\\\"GY\\\":\\\"ज्ञ\\\",\\\"H\\\":\\\"ः\\\",\\\"I\\\":\\\"ई\\\",\\\"J\\\":\\\"ज़\\\",\\\"K\\\":\\\"ख़\\\",\\\"L\\\":\\\"ळ\\\",\\\"LLI\\\":\\\"ॡ\\\",\\\"LLi\\\":\\\"ऌ\\\",\\\"L^i\\\":\\\"ऌ\\\",\\\"M\\\":\\\"ं\\\",\\\"N\\\":\\\"ण\\\",\\\"OM\\\":\\\"ॐ\\\",\\\"R\\\":\\\"ऱ\\\",\\\"RRI\\\":\\\"ॠ\\\",\\\"RRi\\\":\\\"ऋ\\\",\\\"R^i\\\":\\\"ऋ\\\",\\\"Rs.\\\":\\\"₹\\\",\\\"Sh\\\":\\\"ष\\\",\\\"T\\\":\\\"ट\\\",\\\"Th\\\":\\\"ठ\\\",\\\"U\\\":\\\"ऊ\\\",\\\"Y\\\":\\\"य़\\\",\\\"^e\\\":\\\"ऎ\\\",\\\"^n\\\":\\\"ऩ\\\",\\\"^o\\\":\\\"ऒ\\\",\\\"a\\\":\\\"अ\\\",\\\"a.c\\\":\\\"ऍ\\\",\\\"a.e\\\":\\\"ॲ\\\",\\\"aa\\\":\\\"आ\\\",\\\"ai\\\":\\\"ऐ\\\",\\\"au\\\":\\\"औ\\\",\\\"b\\\":\\\"ब\\\",\\\"bh\\\":\\\"भ\\\",\\\"ch\\\":\\\"च\\\",\\\"chh\\\":\\\"छ\\\",\\\"d\\\":\\\"द\\\",\\\"dh\\\":\\\"ध\\\",\\\"dny\\\":\\\"ज्ञ\\\",\\\"dnyA\\\":\\\"ज्ञा\\\",\\\"dnyA.c\\\":\\\"ज्ञॉ\\\",\\\"dnyI\\\":\\\"ज्ञी\\\",\\\"dnyLLI\\\":\\\"ज्ञॣ\\\",\\\"dnyLLi\\\":\\\"ज्ञॢ\\\",\\\"dnyL^i\\\":\\\"ज्ञॢ\\\",\\\"dnyRRI\\\":\\\"ज्ञॄ\\\",\\\"dnyRRi\\\":\\\"ज्ञृ\\\",\\\"dnyR^i\\\":\\\"ज्ञृ\\\",\\\"dnyU\\\":\\\"ज्ञू\\\",\\\"dny^e\\\":\\\"ज्ञॆ\\\",\\\"dny^o\\\":\\\"ज्ञॊ\\\",\\\"dnya\\\":\\\"ज्ञ\\\",\\\"dnya.c\\\":\\\"ज्ञॅ\\\",\\\"dnyaa\\\":\\\"ज्ञा\\\",\\\"dnyai\\\":\\\"ज्ञै\\\",\\\"dnyau\\\":\\\"ज्ञौ\\\",\\\"dnydny\\\":\\\"ज्ञ्ज्ञ\\\",\\\"dnye\\\":\\\"ज्ञे\\\",\\\"dnyee\\\":\\\"ज्ञी\\\",\\\"dnyi\\\":\\\"ज्ञि\\\",\\\"dnyii\\\":\\\"ज्ञी\\\",\\\"dnyo\\\":\\\"ज्ञो\\\",\\\"dnyu\\\":\\\"ज्ञु\\\",\\\"dnyuu\\\":\\\"ज्ञू\\\",\\\"e\\\":\\\"ए\\\",\\\"ee\\\":\\\"ई\\\",\\\"f\\\":\\\"फ़\\\",\\\"g\\\":\\\"ग\\\",\\\"gh\\\":\\\"घ\\\",\\\"h\\\":\\\"ह\\\",\\\"i\\\":\\\"इ\\\",\\\"ii\\\":\\\"ई\\\",\\\"j\\\":\\\"ज\\\",\\\"jh\\\":\\\"झ\\\",\\\"j~n\\\":\\\"ज्ञ\\\",\\\"k\\\":\\\"क\\\",\\\"kSh\\\":\\\"क्ष\\\",\\\"kh\\\":\\\"ख\\\",\\\"l\\\":\\\"ल\\\",\\\"ld\\\":\\\"ळ\\\",\\\"m\\\":\\\"म\\\",\\\"n\\\":\\\"न\\\",\\\"o\\\":\\\"ओ\\\",\\\"p\\\":\\\"प\\\",\\\"ph\\\":\\\"फ\\\",\\\"q\\\":\\\"क़\\\",\\\"r\\\":\\\"र\\\",\\\"s\\\":\\\"स\\\",\\\"sh\\\":\\\"श\\\",\\\"t\\\":\\\"त\\\",\\\"th\\\":\\\"थ\\\",\\\"u\\\":\\\"उ\\\",\\\"uu\\\":\\\"ऊ\\\",\\\"v\\\":\\\"व\\\",\\\"x\\\":\\\"क्ष\\\",\\\"y\\\":\\\"य\\\",\\\"z\\\":\\\"ज़\\\",\\\"zh\\\":\\\"ऴ\\\",\\\"|\\\":\\\"।\\\",\\\"||\\\":\\\"॥\\\",\\\"~N\\\":\\\"ङ\\\",\\\"~Rs.\\\":\\\"₹\\\",\\\"~n\\\":\\\"ञ\\\",\\\"ṅ\\\":\\\"ङ\\\"}\");\n\n//# sourceURL=webpack:///./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json?");
+
+/***/ }),
+
+/***/ "./lib/transliterators/ITRANSDevanagariToUnicode/index.js":
+/*!****************************************************************!*\
+  !*** ./lib/transliterators/ITRANSDevanagariToUnicode/index.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const { Bundled } = __webpack_require__(/*! ../bundled.js */ \"./lib/transliterators/bundled.js\");\n\n/**\n * ITRANSDevanagariToUnicode transliterator\n * \n * @class transliterators/ITRANSDevanagariToUnicode\n * @extends Bundled\n */\n\nconst ITRANSDevanagariToUnicodeSettings = __webpack_require__(/*! ./ITRANSDevanagariToUnicode.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode.json\");\nconst ITRANSDevanagariToUnicodeTests = __webpack_require__(/*! ./ITRANSDevanagariToUnicode_tests.json */ \"./lib/transliterators/ITRANSDevanagariToUnicode/ITRANSDevanagariToUnicode_tests.json\");\nconst ITRANSDevanagariToUnicode = new Bundled(ITRANSDevanagariToUnicodeSettings, ITRANSDevanagariToUnicodeTests);\n\nmodule.exports = ITRANSDevanagariToUnicode;\n\n\n//# sourceURL=webpack:///./lib/transliterators/ITRANSDevanagariToUnicode/index.js?");
 
 /***/ }),
 
@@ -174,18 +229,7 @@ eval("const { GraphTransliterator } = __webpack_require__(/*! ../GraphTransliter
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(__dirname) {/**\n * Graph Transliterator's bundled transliterators\n *\n * @module transliterators\n *\n */\nconst path = __webpack_require__(/*! path */ \"path\");\n\nconst { Bundled } = __webpack_require__(/*! ./bundled.js */ \"./lib/transliterators/bundled.js\");\nmodule.exports = {\n  Bundled,\n  Example: __webpack_require__(\"./lib/transliterators sync recursive\")(path.join(__dirname, \"Example\")),\n  ITRANSDevanagariToUnicode: __webpack_require__(\"./lib/transliterators sync recursive\")(path.join(\n    __dirname,\n    \"ITRANSDevanagariToUnicode\"\n  ))\n};\n\n/* WEBPACK VAR INJECTION */}.call(this, \"/\"))\n\n//# sourceURL=webpack:///./lib/transliterators/index.js?");
-
-/***/ }),
-
-/***/ "path":
-/*!***********************!*\
-  !*** external "path" ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = require(\"path\");\n\n//# sourceURL=webpack:///external_%22path%22?");
+eval("/**\n* Graph Transliterator's bundled transliterators\n*\n* @module transliterators\n*\n*/\nconst { Bundled } = __webpack_require__(/*! ./bundled.js */ \"./lib/transliterators/bundled.js\");\nmodule.exports = {\n  Bundled,\n  Example: __webpack_require__(/*! ./Example */ \"./lib/transliterators/Example/index.js\"),\n  ITRANSDevanagariToUnicode: __webpack_require__(/*! ./ITRANSDevanagariToUnicode */ \"./lib/transliterators/ITRANSDevanagariToUnicode/index.js\")\n};\n\n//# sourceURL=webpack:///./lib/transliterators/index.js?");
 
 /***/ })
 
