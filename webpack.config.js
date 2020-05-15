@@ -12,7 +12,7 @@ const ServerConfig = {
 };
 const ClientConfig = {
   target: "web",
-  mode: "development",
+  mode: "production",
   entry: "./lib/index.js",
   output: {
     path: path.join(__dirname, "dist"),
@@ -36,7 +36,7 @@ const ClientConfig = {
 };
 const GraphTransliteratorOnlyConfig = {
   target: "web",
-  mode: "development",
+  mode: "production",
   entry: "./lib/GraphTransliterator.js",
   module: {
     rules: [
